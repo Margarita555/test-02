@@ -1,0 +1,46 @@
+.hero {
+  &__container {
+    position: relative;
+  }
+
+  &__image {
+    padding-top: 385px;
+    padding-bottom: 186px;
+    background-image: linear-gradient(
+        $hero-background-color,
+        $hero-background-color
+      ),
+      url(../../images/hero-image.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    padding-top: 65px;
+    margin-bottom: 28px;
+    font-family: $main-font;
+    font-size: 86px;
+    line-height: 1;
+    color: $primary-background-color;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-size: 30px;
+    line-height: 1.4;
+    color: $primary-background-color;
+  }
+}
+
+.social {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

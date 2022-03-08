@@ -1,0 +1,130 @@
+.blog {
+  background-color: $background-color;
+
+  &__wrapper {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title::after {
+    position: absolute;
+    left: 319px;
+    bottom: 10px;
+
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: $secondary-border-color;
+    border-radius: 2px;
+  }
+
+  &__gallery {
+    display: flex;
+  }
+
+  &__item {
+    max-width: 380px;
+    padding: 10px;
+  }
+
+  &__item:not(:last child) {
+    margin-right: 15px;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    padding: 8px;
+    border: 2px solid $instagram-background-color;
+  }
+
+  &__box {
+    max-width: 380px;
+    padding: 24px 20px;
+    border: 2px solid $instagram-background-color;
+    border-top: none;
+  }
+
+  &__thumb {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    padding: 5px 10px;
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 1.3;
+    color: $primary-text-color;
+    text-transform: uppercase;
+  }
+
+  &__subtitle--news {
+    background-color: $instagram-background-color;
+  }
+
+  &__subtitle--article {
+    background-color: $secondary-background-color;
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 1.3;
+    color: $primary-text-color;
+    text-transform: uppercase;
+  }
+
+  // &__day {
+  //   font-size: 14px;
+  //   color: $primary-text-color;
+  // }
+
+  // &__month {
+  //   font-size: 14px;
+  //   line-height: 1.3;
+  //   color: $primary-text-color;
+  //   text-transform: uppercase;
+  // }
+
+  // &__year {
+  //   font-size: 14px;
+  //   color: $primary-text-color;
+  // }
+
+  &__link {
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $primary-text-color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $button-background-color;
+  }
+
+  &__statistics {
+    margin-top: 15px;
+    display: flex;
+    // align-items: center;
+    // vertical-align: center;
+  }
+
+  &__subitem {
+    display: flex;
+    align-items: center;
+  }
+
+  &__subitem:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__counter {
+    margin-left: 5px;
+    font-size: 12px;
+    color: $footer-background-color;
+  }
+}

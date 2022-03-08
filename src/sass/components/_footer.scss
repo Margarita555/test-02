@@ -1,0 +1,122 @@
+.footer {
+  background-color: $footer-background-color;
+
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 262px;
+  }
+
+  &__column--double {
+    display: grid;
+    grid-auto-rows: minmax(140px, auto);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__button--arrow {
+    padding: 20px 20px 17px 20px;
+    margin-bottom: 20px;
+    background-color: $secondary-text-color;
+    border: none;
+  }
+
+  &__button--download {
+    padding: 20px 20px 17px 20px;
+    background-color: transparent;
+    border: 1px solid $primary-background-color;
+  }
+
+  &__social {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 130px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 1.4;
+    color: $primary-background-color;
+  }
+
+  &__link {
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $primary-background-color;
+  }
+
+  &__brand {
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $primary-background-color;
+  }
+}
+
+.basement {
+  display: flex;
+  justify-content: space-between;
+
+  &__language {
+    background-color: transparent;
+    border: none;
+    font-family: $main-font;
+    color: $languages-color;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  &__language {
+    background-color: transparent;
+    border: none;
+    font-family: $main-font;
+    color: $languages-color;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  &__language:hover,
+  &__language:focus {
+    color: $primary-background-color;
+  }
+
+  &__rights {
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $primary-background-color;
+  }
+
+  &__text {
+    // font-family: Gilroy;
+    font-size: 12px;
+    line-height: 1.33;
+    color: $primary-background-color;
+  }
+
+  &__development {
+    display: flex;
+  }
+
+  &__icon {
+    margin-left: 4px;
+  }
+}
+
+.separator {
+  color: $primary-background-color;
+}

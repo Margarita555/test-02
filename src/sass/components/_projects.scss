@@ -1,0 +1,93 @@
+.projects {
+  &__container {
+    padding-bottom: 433px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__title::after {
+    position: absolute;
+    left: 224px;
+    bottom: 10px;
+
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: $secondary-border-color;
+    border-radius: 2px;
+  }
+
+  &__image {
+    position: absolute;
+    right: 627px;
+    max-width: 1070px;
+  }
+
+  &__box {
+    position: relative;
+    max-width: 540px;
+    margin-right: 0px;
+    margin-left: auto;
+  }
+
+  &__box--buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button--arrow {
+    padding: 20px 15px 18px 15px;
+    border: 1px solid $border-color;
+    background-color: $primary-background-color;
+  }
+
+  &__button--left {
+    margin-right: 10px;
+  }
+
+  &__button--right {
+    fill: $accent-color;
+  }
+
+  &__subtitle {
+    margin-top: 85px;
+    margin-bottom: 40px;
+    font-family: $main-font;
+    font-size: 44px;
+    line-height: 1.3;
+
+    color: $primary-text-color;
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.4;
+
+    color: $primary-text-color;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__gallery {
+    position: absolute;
+    left: -180px;
+    bottom: -345px;
+    display: flex;
+
+    &--image:not(last-child) {
+      margin-right: 40px;
+    }
+  }
+}
