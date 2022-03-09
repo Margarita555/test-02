@@ -1,18 +1,35 @@
 .hero {
+  position: relative;
+
   &__container {
     position: relative;
   }
 
   &__image {
+    position: relative;
     padding-top: 385px;
     padding-bottom: 186px;
-    background-image: linear-gradient(
-        $hero-background-color,
-        $hero-background-color
-      ),
-      url(../../images/hero-image.jpg);
+
+    // background-image: linear-gradient(
+    //     $hero-background-color,
+    //     $hero-background-color
+    //   ),
+    //   url(../../img/hero-image.jpg);
+    background-image: url(../../img/hero-image.jpg);
     background-position: center;
     background-size: cover;
+  }
+
+  &__image:after {
+    content: "";
+    background: $hero-background-color;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 
   &__title {
@@ -23,6 +40,8 @@
     line-height: 1;
     color: $primary-background-color;
     text-transform: uppercase;
+    position: relative;
+    z-index: 3;
   }
 
   &__text {
@@ -30,6 +49,8 @@
     font-size: 30px;
     line-height: 1.4;
     color: $primary-background-color;
+    position: relative;
+    z-index: 3;
   }
 }
 
@@ -39,6 +60,7 @@
   top: 0;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 
   &__item:not(:last-child) {
     margin-bottom: 20px;
