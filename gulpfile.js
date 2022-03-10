@@ -9,6 +9,7 @@ const html = require("./task/html.js");
 const scss = require("./task/scss.js");
 const js = require("./task/js.js");
 const img = require("./task/img.js");
+const font = require("./task/font.js");
 
 const server = () => {
   browserSync.init({
@@ -23,7 +24,15 @@ const watcher = () => {
   watch(path.scss.watch, scss).on("all", browserSync.reload);
   watch(path.js.watch, js).on("all", browserSync.reload);
   watch(path.img.watch, img).on("all", browserSync.reload);
+  watch(path.font.watch, font).on("all", browserSync.reload);
 };
+
+const build = series(
+  clear,
+  parallel(html, scss, js, img, font)
+);
+
+const dev = series(build, parallel(watcher, server));
 
 exports.watch = watcher;
 exports.html = html;
@@ -31,8 +40,5 @@ exports.clear = clear;
 exports.scss = scss;
 exports.js = js;
 exports.img = img;
-exports.dev = series(
-  clear,
-  parallel(html, scss, js, img),
-  parallel(watcher, server)
-);
+exports.font = font;
+exports.default = app.isProd? build : dev;

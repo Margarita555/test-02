@@ -55,10 +55,7 @@
 
   &__subtitle {
     padding: 5px 10px;
-    font-family: $main-font;
-    font-size: 14px;
-    line-height: 1.3;
-    color: $primary-text-color;
+    @include fonts($main-font, 14px, 1.3);
     text-transform: uppercase;
   }
 
@@ -71,33 +68,12 @@
   }
 
   &__date {
-    font-size: 14px;
-    line-height: 1.3;
-    color: $primary-text-color;
+    @include fonts($main-font, 14px, 1.3);
     text-transform: uppercase;
   }
 
-  // &__day {
-  //   font-size: 14px;
-  //   color: $primary-text-color;
-  // }
-
-  // &__month {
-  //   font-size: 14px;
-  //   line-height: 1.3;
-  //   color: $primary-text-color;
-  //   text-transform: uppercase;
-  // }
-
-  // &__year {
-  //   font-size: 14px;
-  //   color: $primary-text-color;
-  // }
-
   &__link {
-    font-family: $main-font;
-    font-size: 20px;
-    line-height: 1.2;
+    @include fonts($main-font, 20px, 1.2);
     color: $primary-text-color;
   }
 
@@ -109,8 +85,6 @@
   &__statistics {
     margin-top: 15px;
     display: flex;
-    // align-items: center;
-    // vertical-align: center;
   }
 
   &__subitem {

@@ -1,7 +1,30 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../font/Montserrat-Regular.woff);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../font/Montserrat-Light.woff);
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../font/Montserrat-Medium.woff);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
 body {
-  font-family: $main-font;
-  // color: $primary-text-color;
-  // background-color: $primary-background-color;
+  font-family: "Montserrat";
+  color: $primary-text-color;
+  background-color: $primary-background-color;
 }
 
 h1,
@@ -38,7 +61,7 @@ img {
   line-height: 1.21;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: $primary-text-color;
+  // color: $primary-text-color;
 }
 
 .container {
@@ -53,7 +76,6 @@ img {
   //   @media screen and (min-width: 768px) and (max-width: 1199px) {
   //     max-width: 768px;
   //   }
-
 }
 
 @media screen and (min-width: 1500px) {
@@ -61,7 +83,6 @@ img {
     max-width: 1500px;
   }
 }
-
 
 @media screen and (min-width: 1500px) {
   .section {
