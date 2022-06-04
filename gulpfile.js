@@ -27,20 +27,24 @@ const watcher = () => {
   watch(path.font.watch, font).on("all", browserSync.reload);
 };
 
-// const gulp = require("gulp");
-// const ghPages = require("gulp-gh-pages");
+const gulp = require("gulp");
+const ghPages = require("gulp-gh-pages");
 
 // gulp.task("deploy", function () {
 //   return gulp.src("./public/**/*").pipe(ghPages());
 // });
+function deploy(cb) {
+  return gulp.src("./public/**/*").pipe(ghPages());
+}
 
 const build = series(clear, parallel(html, scss, js, img, font));
 
 const dev = series(build, parallel(watcher, server));
 
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), "./public"), cb);
-}
+// const ghPages = require("gh-pages");
+// function deploy(cb) {
+//   ghPages.publish(path.join(process.cwd(), "./public"), cb);
+// }
 exports.deploy = deploy;
 
 exports.watch = watcher;

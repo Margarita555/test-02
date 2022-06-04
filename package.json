@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp --production",
-    "deploy": "gulp build && gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "browserslist": [
     "last 3 versions"
@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/Margarita555/test-02/issues"
   },
-  "homepage": "https://github.com/Margarita555/test-02#readme",
+  "homepage": "https://Margarita555.github.io/test-02",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
