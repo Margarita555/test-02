@@ -15,23 +15,7 @@
         $hero-background-color
       ),
       url(../img/hero-image.jpg);
-    // background-repeat: no-repeat;
-    // background-image: url(../../img/hero-image.jpg);
-    // background-position: center;
-    // background-size: cover;
   }
-
-  // &__image:after {
-  //   content: "";
-  //   background: $hero-background-color;
-  //   display: block;
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 1;
-  // }
 
   &__title {
     padding-top: 65px;
@@ -39,15 +23,11 @@
     @include fonts($main-font, 86px, 1);
     color: $primary-background-color;
     text-transform: uppercase;
-    // position: relative;
-    // z-index: 3;
   }
 
   &__text {
     @include fonts($main-font, 30px, 1.4);
     color: $primary-background-color;
-    // position: relative;
-    // z-index: 3;
   }
 }
 
@@ -57,7 +37,6 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  // z-index: 3;
 
   &__item:not(:last-child) {
     margin-bottom: 20px;
