@@ -87,6 +87,7 @@
   &__link {
     @include fonts($main-font, 20px, 1.2);
     color: $primary-text-color;
+    background-color: aqua;
   }
 
   &__link:hover,
