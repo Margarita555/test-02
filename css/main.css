@@ -213,7 +213,7 @@ img {
 }
 
 .hero__image {
-  background: linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.45)), url(../../img/hero-image.jpg);
+  background: linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.45)), url(../img/hero-image.jpg);
   position: relative;
   padding-top: 385px;
   padding-bottom: 179px;
