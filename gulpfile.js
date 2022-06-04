@@ -27,12 +27,21 @@ const watcher = () => {
   watch(path.font.watch, font).on("all", browserSync.reload);
 };
 
-const build = series(
-  clear,
-  parallel(html, scss, js, img, font)
-);
+// const gulp = require("gulp");
+// const ghPages = require("gulp-gh-pages");
+
+// gulp.task("deploy", function () {
+//   return gulp.src("./public/**/*").pipe(ghPages());
+// });
+
+const build = series(clear, parallel(html, scss, js, img, font));
 
 const dev = series(build, parallel(watcher, server));
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), "./public"), cb);
+}
+exports.deploy = deploy;
 
 exports.watch = watcher;
 exports.html = html;
@@ -41,4 +50,4 @@ exports.scss = scss;
 exports.js = js;
 exports.img = img;
 exports.font = font;
-exports.default = app.isProd? build : dev;
+exports.default = app.isProd ? build : dev;

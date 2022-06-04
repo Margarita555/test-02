@@ -25,8 +25,19 @@
     display: flex;
   }
 
+  // &__content {
+  //   display: flex;
+  //   flex-direction: column;
+  //   // width: 100%;
+  // }
+
   &__item {
-    max-width: 380px;
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    width: 25%;
+    // max-width: 380px;
     padding: 10px;
   }
 
@@ -41,6 +52,7 @@
   }
 
   &__box {
+    flex: 1;
     max-width: 380px;
     padding: 24px 20px;
     border: 2px solid $instagram-background-color;
