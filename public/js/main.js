@@ -15,7 +15,7 @@
   \************************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("const sum = __webpack_require__(/*! ./module/sum */ \"./src/js/module/sum.js\");\r\n\r\nconsole.log(sum(2, 10));\r\nconsole.log(sum(3, 7));\r\n\n\n//# sourceURL=webpack://test-02/./src/js/main.js?");
+eval("const sum = __webpack_require__(/*! ./module/sum */ \"./src/js/module/sum.js\");\r\nconsole.log(sum(3, 7));\r\n\n\n//# sourceURL=webpack://test-02/./src/js/main.js?");
 
 /***/ }),
 

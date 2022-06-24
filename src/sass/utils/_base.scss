@@ -25,6 +25,7 @@ body {
   font-family: "Montserrat";
   color: $primary-text-color;
   background-color: $primary-background-color;
+  overflow-x: hidden;
 }
 
 h1,
@@ -61,21 +62,12 @@ img {
   line-height: 1.21;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  // color: $primary-text-color;
 }
 
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  //   @media screen and (min-width: 480px) and (max-width: 767px) {
-  //     max-width: 450px;
-  //   }
-
-  //   @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //     max-width: 768px;
-  //   }
 }
 
 @media screen and (min-width: 1500px) {

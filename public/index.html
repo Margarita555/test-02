@@ -9,18 +9,6 @@
     <link rel="stylesheet" href="./css/main.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous">
-
-    <!-- <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet"> -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet"> -->
     <script src="../js/main.js"></script>
   </head>
   <body>
@@ -122,12 +110,10 @@
   <div class="container projects__container">
     <h1 class="projects__title title">Наши проекты</h1>
     <div class="projects__wrapper">
-      <img class="projects__image" src="./img/projects-images/projects-main-image.jpg" alt="gym">
+      <img srcset="./img/projects-images/projects-main-image-1x.jpg, ./img/projects-images/projects-main-image-2x.jpg 2x" class="projects__image" src="./img/projects-images/projects-main-image-1x.jpg" alt="gym">
       <div class="projects__box">
         <div class="projects__box--buttons">
-          <button type="button" class="projects__button button">
-            Смотреть все проекты
-          </button>
+          <button type="button" class="projects__button button">Смотреть все проекты</button>
           <div>
             <button type="button" class="projects__button--arrow projects__button--left">
               <svg class="icon" width="26" height="17">
@@ -142,16 +128,12 @@
           </div>
         </div>
         <h3 class="projects__subtitle">Сеть фитнес-центров Start&Finish</h3>
-        <p class="projects__text">
-          Создали общий стиль для фасада и внутренней отделки
-        </p>
-        <p class="projects__text">
-          Еще несколько коротких предложений о том, что было сделано на проекте
-        </p>
+        <p class="projects__text">Создали общий стиль для фасада и внутренней отделки</p>
+        <p class="projects__text">Еще несколько коротких предложений о том, что было сделано на проекте</p>
         <div class="projects__gallery">
-          <img class="projects__gallery--image" src="./img/projects-images/gym-one.jpg" alt="gym" width="327">
-          <img class="projects__gallery--image" src="./img/projects-images/gym-two.jpg" alt="gym" width="327">
-          <img class="projects__gallery--image" src="./img/projects-images/gym-three.jpg" alt="gym" width="327">
+          <img class="projects__gallery--image" srcset="./img/projects-images/gym-one-1x.jpg, ./img/projects-images/gym-one-2x.jpg 2x" src="./img/projects-images/gym-one-1x.jpg" alt="gym" width="327">
+          <img class="projects__gallery--image" srcset="./img/projects-images/gym-two-1x.jpg, ./img/projects-images/gym-two-2x.jpg 2x" src="./img/projects-images/gym-two-1x.jpg" alt="gym" width="327">
+          <img class="projects__gallery--image" srcset="./img/projects-images/gym-three-1x.jpg, ./img/projects-images/gym-three-2x.jpg 2x" src="./img/projects-images/gym-three-1x.jpg" alt="gym" width="327">
         </div>
       </div>
     </div>
@@ -166,18 +148,15 @@
     </div>
     <ul class="blog__gallery list">
       <li class="blog__item">
-        <img src="./img/blog-images/blog-bathroom.jpg" alt="bathroom tile">
+        <img srcset="./img/blog-images/blog-bathroom-1x.jpg, ./img/blog-images/blog-bathroom-2x.jpg 2x" src="./img/blog-images/blog-bathroom-1x.jpg" alt="bathroom tile">
         <div class="blog__box">
           <div class="blog__thumb">
             <h3 class="blog__subtitle blog__subtitle--news link">Новость</h3>
             <span class="blog__date link">10 апреля 2020</span>
-            <!-- <div class="blog__date">
-                  <span class="blog__day link">10</span>
-                  <span class="blog__month link">апреля</span>
-                  <span class="blog__year link">2020</span>
-                </div> -->
           </div>
-          <a class="blog__link link" href="#">Приглашаем посетить выставку Cevisama 2020</a>
+          <a class="blog__link link" href="#">
+            Приглашаем посетить выставку Cevisama 2020
+          </a>
           <ul class="blog__statistics list">
             <li class="blog__subitem">
               <svg width="18" height="14">
@@ -196,13 +175,15 @@
         </div>
       </li>
       <li class="blog__item">
-        <img src="./img/blog-images/blog-tile-patterns.jpg" alt="tile patterns">
+        <img srcset="./img/blog-images/blog-tile-patterns-1x.jpg, ./img/blog-images/blog-tile-patterns-2x.jpg 2x" src="./img/blog-images/blog-tile-patterns-1x.jpg" alt="tile patterns">
         <div class="blog__box">
           <div class="blog__thumb">
             <h3 class="blog__subtitle blog__subtitle--article link">Статья</h3>
             <span class="blog__date link">10 апреля 2020</span>
           </div>
-          <a class="blog__link link" href="#">Как правильно выбирать керамическую плитку</a>
+          <a class="blog__link link" href="#">
+            Как правильно выбирать керамическую плитку
+          </a>
           <ul class="blog__statistics list">
             <li class="blog__subitem">
               <svg width="18" height="14">
@@ -220,13 +201,15 @@
         </div>
       </li>
       <li class="blog__item">
-        <img src="./img/blog-images/blog-floor-tile.jpg" alt="floor tile">
+        <img srcset="./img/blog-images/blog-floor-tile-1x.jpg, ./img/blog-images/blog-floor-tile-2x.jpg 2x" src="./img/blog-images/blog-floor-tile-1x.jpg" alt="floor tile">
         <div class="blog__box">
           <div class="blog__thumb">
             <h3 class="blog__subtitle blog__subtitle--article link">Статья</h3>
             <span class="blog__date link">10 апреля 2020</span>
           </div>
-          <a class="blog__link link" href="#">Керамогранит. Виды и применение. Заголовок в две с...</a>
+          <a class="blog__link link" href="#">
+            Керамогранит. Виды и применение. Заголовок в две с...
+          </a>
           <ul class="blog__statistics list">
             <li class="blog__subitem">
               <svg width="18" height="14">
@@ -244,13 +227,15 @@
         </div>
       </li>
       <li class="blog__item">
-        <img src="./img/blog-images/wall-tile.jpg" alt="bathroom tile">
+        <img srcset="./img/blog-images/wall-tile-1x.jpg, ./img/blog-images/wall-tile-2x.jpg 2x" src="./img/blog-images/wall-tile-1x.jpg" alt="bathroom tile">
         <div class="blog__box">
           <div class="blog__thumb">
             <h3 class="blog__subtitle blog__subtitle--news link">Новость</h3>
             <span class="blog__date link">10 апреля 2020</span>
           </div>
-          <a class="blog__link link" href="#">Приглашаем посетить выставку Cevisama 2020</a>
+          <a class="blog__link link" href="#">
+            Приглашаем посетить выставку Cevisama 2020
+          </a>
           <ul class="blog__statistics list">
             <li class="blog__subitem">
               <svg width="18" height="14">
@@ -276,19 +261,19 @@
       <h2 class="instagram__title title">Следите за нами в instagram</h2>
       <ul class="instagram__gallery list">
         <li class="instagram__item">
-          <img src="./img/instagram-images/image-sofa.jpg" alt="sofa image">
+          <img srcset="./img/instagram-images/image-sofa-1x.jpg, ./img/instagram-images/image-sofa-2x.jpg 2x" src="./img/instagram-images/image-sofa-1x.jpg" alt="sofa image">
         </li>
         <li class="instagram__item">
-          <img src="./img/instagram-images/tile.jpg" alt="tile image">
+          <img srcset="./img/instagram-images/tile-1x.jpg, ./img/instagram-images/tile-2x.jpg 2x" src="./img/instagram-images/tile-1x.jpg" alt="tile image">
         </li>
         <li class="instagram__item">
-          <img src="./img/instagram-images/living-room.jpg" alt="living-room image">
+          <img srcset="./img/instagram-images/living-room-1x.jpg, ./img/instagram-images/living-room-2x.jpg 2x" src="./img/instagram-images/living-room-1x.jpg" alt="living-room image">
         </li>
         <li class="instagram__item">
-          <img src="./img/instagram-images/tile-patterns.jpg" alt="tile patterns">
+          <img srcset="./img/instagram-images/tile-patterns-1x.jpg, ./img/instagram-images/tile-patterns-2x.jpg 2x" src="./img/instagram-images/tile-patterns-1x.jpg" alt="tile patterns">
         </li>
         <li class="instagram__item">
-          <img src="./img/instagram-images/floor.jpg" alt="floor image">
+          <img srcset="./img/instagram-images/floor-1x.jpg, ./img/instagram-images/floor-2x.jpg 2x" src="./img/instagram-images/floor-1x.jpg" alt="floor image">
         </li>
         <li class="instagram__item instagram__item--last">
           <a href="#" class="instagram__link--icon link">
@@ -307,12 +292,10 @@
 
       <section class="form__section section">
   <div class="form__container container">
-    <img src="./img/form-image.jpg" alt="sink image">
+    <img srcset="./img/form-image-1x.jpg, ./img/form-image-2x.jpg 2x" src="./img/form-image-1x.jpg" alt="sink image">
     <form class="form">
       <h2 class="form__title">Возникли вопросы?</h2>
-      <p class="form__text">
-        Оставьте свой номер, и наши менеджеры свяжутся с Вами
-      </p>
+      <p class="form__text">Оставьте свой номер, и наши менеджеры свяжутся с Вами</p>
 
       <input class="form__input" type="text" name="name" id="name" placeholder="*Имя">
 
@@ -445,7 +428,7 @@
       </div>
     </div>
     <div class="basement">
-      <div class="basement__rights">Ceramica &copy; 2020</div>
+      <span class="basement__rights">Ceramica &copy; 2020</span>
       <div>
         <button type="button" class="basement__language">UA</button>
         <span class="separator">|</span>
