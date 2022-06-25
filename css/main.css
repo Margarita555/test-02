@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Montserrat";
-  src: url(../../font/Montserrat-Regular.woff);
+  src: url(../font/Montserrat-Regular.woff);
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url(../../font/Montserrat-Light.woff);
+  src: url(../font/Montserrat-Light.woff);
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url(../../font/Montserrat-Medium.woff);
+  src: url(../font/Montserrat-Medium.woff);
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -26,6 +26,7 @@ body {
   background: #ffffff;
   font-family: "Montserrat";
   color: #40474e;
+  overflow-x: hidden;
 }
 
 h1,
@@ -184,7 +185,7 @@ img {
 
 .select-css {
   font: 16px/1.6 "Montserrat", sans serif;
-  background: url(../../img/arrow-drop-down.svg) no-repeat right -1px top 50%/0.95em auto;
+  background: url(../img/arrow-drop-down.svg) no-repeat right -1px top 50%/0.95em auto;
   display: block;
   border: none;
   appearance: none;
@@ -213,10 +214,13 @@ img {
 }
 
 .hero__image {
-  background: linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.45)), url(../img/hero-image.jpg);
+  background: linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.45)), url(../img/hero-image-1x.jpg);
   position: relative;
   padding-top: 385px;
   padding-bottom: 179px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1920px;
 }
 
 .hero__title {
@@ -302,6 +306,7 @@ img {
   background: #ffffff;
   padding: 20px 15px 18px 15px;
   border: 1px solid #98a4ae;
+  cursor: pointer;
 }
 
 .projects__button--left {
@@ -740,5 +745,13 @@ img {
 
   .instagram__container {
     max-width: 880px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero__image {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 8, 0.45)), to(rgba(5, 7, 8, 0.45))), url(../img/hero-image-2x.jpg);
+    background-image: -o-linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.45)), url(../img/hero-image-2x.jpg);
+    background-image: linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.45)), url(../img/hero-image-2x.jpg);
   }
 }
