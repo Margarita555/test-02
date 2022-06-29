@@ -5,7 +5,6 @@
 
   &__wrapper {
     position: relative;
-    display: flex;
   }
 
   &__title {
@@ -16,8 +15,7 @@
     position: absolute;
     left: 224px;
     bottom: 10px;
-
-    content: "";
+    content: '';
     display: block;
     width: 200px;
     height: 2px;
@@ -25,10 +23,11 @@
     border-radius: 2px;
   }
 
-  &__image {
+  .slider-for-wrapper {
     position: absolute;
     right: 627px;
     max-width: 1070px;
+    z-index: 1;
   }
 
   &__box {
@@ -52,6 +51,7 @@
 
   &__button--left {
     margin-right: 10px;
+    fill: $primary-text-color;
   }
 
   &__button--right {
@@ -73,14 +73,54 @@
     margin-bottom: 15px;
   }
 
-  &__gallery {
+  .carousel-wrapper {
     position: absolute;
     left: -180px;
     bottom: -345px;
-    display: flex;
-
-    &--image:not(last-child) {
-      margin-right: 40px;
-    }
+    z-index: 10;
   }
+}
+
+.carousel-wrapper {
+  max-width: 941px;
+  overflow: hidden;
+}
+
+.carousel__item {
+  width: 327px;
+}
+
+.slick-slide {
+  margin: 0 -120px;
+}
+
+.slick-track {
+  display: flex;
+}
+.slick-list {
+  margin-left: 120px;
+}
+
+.img-magnifier-container {
+  position: relative;
+  z-index: 2;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  cursor: none;
+  width: 120px;
+  height: 120px;
+  z-index: 100;
+}
+
+.magnifier-icon {
+  position: absolute;
+  left: -28px;
+  top: 500px;
+  z-index: 30;
+}
+
+.magnifier-icon.invisible {
+  display: none;
 }
