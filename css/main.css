@@ -1,4 +1,20 @@
 @font-face {
+  font-family: "GothamPro";
+  src: url(../font/GothamPro.woff);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GilRoy";
+  src: url(../font/GothamPro.woff);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Montserrat";
   src: url(../font/Montserrat-Regular.woff);
   font-style: normal;
@@ -24,7 +40,7 @@
 
 body {
   background: #ffffff;
-  font-family: "Montserrat";
+  font-family: "GothamPro";
   color: #40474e;
   overflow-x: hidden;
 }
@@ -57,7 +73,7 @@ img {
 }
 
 .title {
-  font: 20px/1.21 "Montserrat", sans serif;
+  font: 20px/1.21 "GothamPro", sans serif;
   position: relative;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -80,7 +96,7 @@ img {
 }
 
 .icon-button {
-  font: 14px/1.21 "Montserrat", sans serif;
+  font: 14px/1.21 "GothamPro", sans serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,7 +140,7 @@ img {
 }
 
 .site-nav__link {
-  font: 16px/1.6 "Montserrat", sans serif;
+  font: 16px/1.6 "GothamPro", sans serif;
   text-transform: uppercase;
   color: #40474e;
 }
@@ -184,7 +200,7 @@ img {
 }
 
 .select-css {
-  font: 16px/1.6 "Montserrat", sans serif;
+  font: 16px/1.6 "GothamPro", sans serif;
   background: url(../img/arrow-drop-down.svg) no-repeat right -1px top 50%/0.95em auto;
   display: block;
   border: none;
@@ -217,22 +233,22 @@ img {
   background: linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.45)), url(../img/hero-image-1x.jpg);
   position: relative;
   padding-top: 385px;
-  padding-bottom: 179px;
+  padding-bottom: 61px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1920px;
 }
 
 .hero__title {
-  font: 86px/1 "Montserrat", sans serif;
-  padding-top: 65px;
+  font: 86px/1 "GothamPro", sans serif;
+  padding-top: 55px;
   margin-bottom: 28px;
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .hero__text {
-  font: 30px/1.4 "Montserrat", sans serif;
+  font: 30px/1.4 "GothamPro", sans serif;
   color: #ffffff;
 }
 
@@ -253,15 +269,80 @@ img {
   margin-bottom: 20px;
 }
 
+.control-panel {
+  margin-top: 78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.control-panel__separator {
+  position: relative;
+}
+
+.control-panel__separator::after {
+  background: #fff;
+  position: absolute;
+  content: "";
+  height: 34px;
+  width: 1.5px;
+  top: -6px;
+  left: 0;
+}
+
+.dots__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dots__item {
+  background: #fff;
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+}
+
+.dots__item.active {
+  background: transparent;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+}
+
+.dots__item:not(:last-child) {
+  margin-right: 17px;
+}
+
+.arrow-right {
+  margin-left: 40px;
+  fill: #aa182c;
+}
+
+.arrow-left {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  fill: #ffffff;
+  margin-right: 40px;
+}
+
 .projects__container {
   padding-bottom: 433px;
 }
 
 .projects__wrapper {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .projects__title {
@@ -276,14 +357,15 @@ img {
   content: "";
   display: block;
   width: 200px;
-  height: 2px;
+  height: 1px;
   border-radius: 2px;
 }
 
-.projects__image {
+.projects .slider-for-wrapper {
   position: absolute;
   right: 627px;
   max-width: 1070px;
+  z-index: 1;
 }
 
 .projects__box {
@@ -310,7 +392,11 @@ img {
 }
 
 .projects__button--left {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
   margin-right: 10px;
+  fill: #40474e;
 }
 
 .projects__button--right {
@@ -318,30 +404,71 @@ img {
 }
 
 .projects__subtitle {
-  font: 44px/1.3 "Montserrat", sans serif;
+  font: 44px/1.3 "GothamPro", sans serif;
   margin-top: 85px;
   margin-bottom: 40px;
 }
 
 .projects__text {
-  font: 300 18px/1.4 "Montserrat", sans serif;
+  font: 300 18px/1.4 "GothamPro", sans serif;
 }
 
 .projects__text:not(:last-child) {
   margin-bottom: 15px;
 }
 
-.projects__gallery {
+.projects .carousel-wrapper {
   position: absolute;
   left: -180px;
   bottom: -345px;
+  z-index: 10;
+}
+
+.carousel-wrapper {
+  max-width: 941px;
+  overflow: hidden;
+}
+
+.carousel__item {
+  width: 327px;
+}
+
+.slick-slide {
+  margin: 0 -130px;
+}
+
+.slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.projects__gallery--image:not(last-child) {
-  margin-right: 40px;
+.slick-list {
+  margin-left: 130px;
+}
+
+.img-magnifier-container {
+  position: relative;
+  z-index: 2;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  cursor: none;
+  width: 120px;
+  height: 120px;
+  z-index: 100;
+}
+
+.magnifier-icon {
+  position: absolute;
+  left: -28px;
+  top: 500px;
+  z-index: 30;
+}
+
+.magnifier-icon.invisible {
+  display: none;
 }
 
 .blog {
@@ -369,7 +496,7 @@ img {
   content: "";
   display: block;
   width: 200px;
-  height: 2px;
+  height: 1px;
   border-radius: 2px;
 }
 
@@ -422,7 +549,7 @@ img {
 }
 
 .blog__subtitle {
-  font: 14px/1.3 "Montserrat", sans serif;
+  font: 14px/1.3 "GothamPro", sans serif;
   padding: 5px 10px;
   text-transform: uppercase;
 }
@@ -436,12 +563,12 @@ img {
 }
 
 .blog__date {
-  font: 14px/1.3 "Montserrat", sans serif;
+  font: 14px/1.3 "GothamPro", sans serif;
   text-transform: uppercase;
 }
 
 .blog__link {
-  font: 20px/1.2 "Montserrat", sans serif;
+  font: 20px/1.2 "GothamPro", sans serif;
   color: #40474e;
 }
 
@@ -523,14 +650,14 @@ img {
 }
 
 .instagram__link {
-  font: 24px/1.2 "Montserrat", sans serif;
+  font: 24px/1.2 "GothamPro", sans serif;
   margin-top: 15px;
   margin-bottom: 18px;
   color: #40474e;
 }
 
 .instagram__button {
-  font: 14px/1.6 "Montserrat", sans serif;
+  font: 14px/1.6 "GothamPro", sans serif;
   background: #6b97bb;
   padding: 15px 32px 13px;
   border: none;
@@ -552,7 +679,7 @@ img {
   content: "";
   display: block;
   width: 200px;
-  height: 2px;
+  height: 1px;
   border-radius: 2px;
 }
 
@@ -583,18 +710,18 @@ img {
 }
 
 .form__title {
-  font: 44px/1.3 "Montserrat", sans serif;
+  font: 44px/1.3 "GothamPro", sans serif;
   margin-bottom: 16px;
   text-align: center;
 }
 
 .form__text {
-  font: 300 18px/1.4 "Montserrat", sans serif;
+  font: 300 18px/1.4 "GothamPro", sans serif;
   margin-bottom: 30px;
 }
 
 .form__input {
-  font: 300 16px/1.4 "Montserrat", sans serif;
+  font: 300 16px/1.4 "GothamPro", sans serif;
   padding: 13px 20px;
   margin-bottom: 17px;
   display: block;
@@ -661,18 +788,18 @@ img {
 }
 
 .footer__title {
-  font: 18px/1.4 "Montserrat", sans serif;
+  font: 18px/1.4 "GothamPro", sans serif;
   margin-bottom: 15px;
   color: #ffffff;
 }
 
 .footer__link {
-  font: 14px/1.2 "Montserrat", sans serif;
+  font: 14px/1.2 "GothamPro", sans serif;
   color: #ffffff;
 }
 
 .footer__brand {
-  font: 14px/1.2 "Montserrat", sans serif;
+  font: 14px/1.2 "GothamPro", sans serif;
   color: #ffffff;
 }
 
@@ -686,7 +813,7 @@ img {
 }
 
 .basement__language {
-  font: 14px/1.2 "Montserrat", sans serif;
+  font: 14px/1.2 "GothamPro", sans serif;
   background: transparent;
   border: none;
   color: rgba(255, 255, 255, 0.4);
@@ -695,7 +822,7 @@ img {
 }
 
 .basement__language {
-  font: 14px/1.2 "Montserrat", sans serif;
+  font: 14px/1.2 "GothamPro", sans serif;
   background: transparent;
   border: none;
   color: rgba(255, 255, 255, 0.4);
@@ -709,13 +836,12 @@ img {
 }
 
 .basement__rights {
-  font: 14px/1.2 "Montserrat", sans serif;
+  font: 14px/1.2 "GothamPro", sans serif;
   color: #ffffff;
 }
 
 .basement__text {
-  font-size: 12px;
-  line-height: 1.33;
+  font: 12px/1.33 "GilRoy";
   color: #ffffff;
 }
 
