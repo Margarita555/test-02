@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import 'slick-carousel';
+// import $ from 'jquery';
+// import 'slick-carousel';
 $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -26,16 +26,16 @@ const carouselContainer = document.querySelector('.carousel-wrapper');
 magnifierIcon.addEventListener('mouseover', magnify);
 carouselContainer.addEventListener('click', magnify);
 function magnify() {
-  // const img = document.querySelector(`.slick-current > img`);
-  const imgParent = document.querySelector(`.slick-current`).firstChild;
-  console.log(imgParent);
-  console.log(imgParent.firstChild);
+  const img = document.querySelector(`.slick-current > img`);
+  // const imgParent = document.querySelector(`.slick-current`).firstChild;
+  // console.log(imgParent);
+  // console.log(imgParent.firstChild);
   // if (imgParent.firstElementChild.classList.contains('img-magnifier-glass')) {
   //   return;
   // }
-  // if (img.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {
-  //   return;
-  // }
+  if (img.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {
+    return;
+  }
   magnifierIcon.classList.add('invisible');
   const zoom = 3;
   let glass, w, h, bw;
