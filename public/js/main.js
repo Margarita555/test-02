@@ -23,19 +23,21 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("// import $ from 'jquery';\r\n// import 'slick-carousel';\r\nconst sum = __webpack_require__(/*! ./module/sum */ \"./src/js/module/sum.js\");\r\nconsole.log(sum(3, 7));\r\n\r\n$('.slider-for').slick({\r\n  slidesToShow: 1,\r\n  slidesToScroll: 1,\r\n  arrows: false,\r\n  fade: true,\r\n  asNavFor: '.carousel',\r\n  initialSlide: 2,\r\n});\r\n\r\n$('.carousel').slick({\r\n  arrows: false,\r\n  slidesToShow: 2,\r\n  slidesToScroll: 1,\r\n  asNavFor: '.slider-for',\r\n  focusOnSelect: true,\r\n  dots: false,\r\n});\r\n\r\nconst magnifierIcon = document.querySelector('.magnifier-icon');\r\nconst carouselContainer = document.querySelector('.carousel-wrapper');\r\n\r\nmagnifierIcon.addEventListener('mouseover', magnify);\r\ncarouselContainer.addEventListener('click', magnify);\r\n\r\nfunction magnify() {\r\n  const img = document.querySelector(`.slick-current > img`);\r\n  if (img.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {\r\n    return;\r\n  }\r\n  magnifierIcon.classList.add('invisible');\r\n  const zoom = 3;\r\n  let glass, w, h, bw;\r\n\r\n  glass = document.createElement('DIV');\r\n  glass.setAttribute('class', 'img-magnifier-glass');\r\n  img.parentElement.insertBefore(glass, img);\r\n  glass.style.backgroundImage = 'url(\"../img/projects-images/magnifier.svg\")';\r\n  glass.style.backgroundRepeat = 'no-repeat';\r\n  glass.style.left = '200px';\r\n  glass.style.top = '500px';\r\n  bw = 3;\r\n  w = glass.offsetWidth / 2;\r\n  h = glass.offsetHeight / 2;\r\n\r\n  glass.addEventListener('mousemove', moveMagnifier);\r\n  img.addEventListener('mousemove', moveMagnifier);\r\n\r\n  function moveMagnifier(e) {\r\n    var pos, x, y;\r\n    e.preventDefault();\r\n    pos = getCursorPos(e);\r\n    x = pos.x;\r\n    y = pos.y;\r\n    if (x > img.width - w / zoom) {\r\n      x = img.width - w / zoom;\r\n      setMagnifyingIcon();\r\n    }\r\n    if (x < w / zoom) {\r\n      x = w / zoom;\r\n      setMagnifyingIcon();\r\n    }\r\n    if (y > img.height - h / zoom) {\r\n      y = img.height - h / zoom;\r\n      setMagnifyingIcon();\r\n    }\r\n    if (y < h / zoom) {\r\n      y = h / zoom;\r\n      setMagnifyingIcon();\r\n    } else if (x > 30 && x < 1040 && y > 30 && y < 766) {\r\n      glass.style.backgroundImage = \"url('\" + img.src + \"')\";\r\n      glass.style.borderColor = '#fff';\r\n      glass.style.borderWidth = '3px';\r\n      glass.style.borderStyle = 'solid';\r\n      glass.style.backgroundSize = img.width * zoom + 'px ' + img.height * zoom + 'px';\r\n      glass.style.left = x - w + 'px';\r\n      glass.style.top = y - h + 'px';\r\n      glass.style.backgroundPosition = '-' + (x * zoom - w + bw) + 'px -' + (y * zoom - h + bw) + 'px';\r\n    }\r\n  }\r\n\r\n  function getCursorPos(e) {\r\n    var a,\r\n      x = 0,\r\n      y = 0;\r\n    e = e || window.event;\r\n    a = img.getBoundingClientRect();\r\n    x = e.pageX - a.left;\r\n    y = e.pageY - a.top;\r\n    x = x - window.pageXOffset;\r\n    y = y - window.pageYOffset;\r\n    return { x: x, y: y };\r\n  }\r\n  function setMagnifyingIcon() {\r\n    glass.style.backgroundImage = 'url(\"../img/projects-images/magnifier.svg\")';\r\n    glass.style.backgroundSize = '120px 120px';\r\n    glass.style.backgroundPosition = '0px 0px';\r\n    glass.style.border = 'none';\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://test-02/./src/js/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_magnify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module/magnify */ \"./src/js/module/magnify.js\");\n\r\n\r\nconst magnifierIcon = document.querySelector('.magnifier-icon');\r\nconst carouselContainer = document.querySelector('.carousel-wrapper');\r\n\r\nmagnifierIcon.addEventListener('mouseover', _module_magnify__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\r\ncarouselContainer.addEventListener('click', _module_magnify__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\r\n\r\n$('.slider-for').slick({\r\n  slidesToShow: 1,\r\n  slidesToScroll: 1,\r\n  arrows: false,\r\n  fade: true,\r\n  asNavFor: '.carousel',\r\n  initialSlide: 2,\r\n});\r\n\r\n$('.carousel').slick({\r\n  arrows: false,\r\n  slidesToShow: 2,\r\n  slidesToScroll: 1,\r\n  asNavFor: '.slider-for',\r\n  focusOnSelect: true,\r\n  dots: false,\r\n});\r\n\r\n\r\n\n\n//# sourceURL=webpack://test-02/./src/js/main.js?");
 
 /***/ }),
 
-/***/ "./src/js/module/sum.js":
-/*!******************************!*\
-  !*** ./src/js/module/sum.js ***!
-  \******************************/
-/***/ (function(module) {
+/***/ "./src/js/module/magnify.js":
+/*!**********************************!*\
+  !*** ./src/js/module/magnify.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("const sum = (a, b) => a + b;\r\n\r\nmodule.exports = sum;\r\n\n\n//# sourceURL=webpack://test-02/./src/js/module/sum.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* binding */ magnify; }\n/* harmony export */ });\nconst magnifierIcon = document.querySelector('.magnifier-icon');\r\n\r\nfunction magnify() {\r\n  const img = document.querySelector(`.slick-current > img`);\r\n  if (img.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {\r\n    return;\r\n  }\r\n  magnifierIcon.classList.add('invisible');\r\n  const zoom = 3;\r\n  let glass, w, h, bw;\r\n\r\n  glass = document.createElement('DIV');\r\n  glass.setAttribute('class', 'img-magnifier-glass');\r\n  img.parentElement.insertBefore(glass, img);\r\n  glass.style.backgroundImage = 'url(\"../img/projects-images/magnifier.svg\")';\r\n  glass.style.backgroundRepeat = 'no-repeat';\r\n  glass.style.left = '200px';\r\n  glass.style.top = '500px';\r\n  bw = 3;\r\n  w = glass.offsetWidth / 2;\r\n  h = glass.offsetHeight / 2;\r\n\r\n  glass.addEventListener('mousemove', moveMagnifier);\r\n  img.addEventListener('mousemove', moveMagnifier);\r\n\r\n  function moveMagnifier(e) {\r\n    var pos, x, y;\r\n    e.preventDefault();\r\n    pos = getCursorPos(e);\r\n    x = pos.x;\r\n    y = pos.y;\r\n    if (x > img.width - w / zoom) {\r\n      x = img.width - w / zoom;\r\n      setMagnifyingIcon();\r\n    }\r\n    if (x < w / zoom) {\r\n      x = w / zoom;\r\n      setMagnifyingIcon();\r\n    }\r\n    if (y > img.height - h / zoom) {\r\n      y = img.height - h / zoom;\r\n      setMagnifyingIcon();\r\n    }\r\n    if (y < h / zoom) {\r\n      y = h / zoom;\r\n      setMagnifyingIcon();\r\n    } else if (x > 30 && x < 1040 && y > 30 && y < 766) {\r\n      glass.style.backgroundImage = \"url('\" + img.src + \"')\";\r\n      glass.style.borderColor = '#fff';\r\n      glass.style.borderWidth = '3px';\r\n      glass.style.borderStyle = 'solid';\r\n      glass.style.backgroundSize = img.width * zoom + 'px ' + img.height * zoom + 'px';\r\n      glass.style.left = x - w + 'px';\r\n      glass.style.top = y - h + 'px';\r\n      glass.style.backgroundPosition = '-' + (x * zoom - w + bw) + 'px -' + (y * zoom - h + bw) + 'px';\r\n    }\r\n  }\r\n\r\n  function getCursorPos(e) {\r\n    var a,\r\n      x = 0,\r\n      y = 0;\r\n    e = e || window.event;\r\n    a = img.getBoundingClientRect();\r\n    x = e.pageX - a.left;\r\n    y = e.pageY - a.top;\r\n    x = x - window.pageXOffset;\r\n    y = y - window.pageYOffset;\r\n    return { x: x, y: y };\r\n  }\r\n  function setMagnifyingIcon() {\r\n    glass.style.backgroundImage = 'url(\"../img/projects-images/magnifier.svg\")';\r\n    glass.style.backgroundSize = '120px 120px';\r\n    glass.style.backgroundPosition = '0px 0px';\r\n    glass.style.border = 'none';\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://test-02/./src/js/module/magnify.js?");
 
 /***/ }),
 
@@ -74,6 +76,35 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPAC
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 /******/ 	
