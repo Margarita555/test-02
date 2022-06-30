@@ -8,7 +8,7 @@
   &__image {
     position: relative;
     padding-top: 385px;
-    padding-bottom: 179px;
+    padding-bottom: 61px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1920px;
@@ -21,7 +21,7 @@
   }
 
   &__title {
-    padding-top: 65px;
+    padding-top: 55px;
     margin-bottom: 28px;
     @include fonts($main-font, 86px, 1);
     color: $primary-background-color;
@@ -46,19 +46,43 @@
   }
 }
 .control-panel {
+  margin-top: 78px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__separator {
+    position: relative;
+  }
+
+  &__separator::after {
+    position: absolute;
+    content: '';
+    height: 34px;
+    width: 1.5px;
+    top: -6px;
+    left: 0;
+    background-color: #fff;
+  }
 }
 
 .dots__list {
   display: flex;
+  align-items: center;
 }
 .dots__item {
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50px;
   background-color: #fff;
+}
+
+.dots__item.active {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  border: 2px solid $primary-background-color;
+  background-color: transparent;
 }
 
 .dots__item:not(:last-child) {
@@ -66,28 +90,13 @@
 }
 
 .arrow-right {
-  fill: $accent-color;
   margin-left: 40px;
+
+  fill: $accent-color;
 }
 
 .arrow-left {
+  transform: rotate(180deg);
   fill: $primary-background-color;
   margin-right: 40px;
 }
-
-.separator {
-  // position: relative;
-  height: 34px;
-  width: 1.5px;
-  background-color: #fff;
-  display: inline-block;
-}
-// .separator::after {
-//   position: absolute;
-//   content: '';
-//   height: 34px;
-//   width: 1.5px;
-//   top: -6px;
-//   left: 0;
-//   background-color: #fff;
-// }

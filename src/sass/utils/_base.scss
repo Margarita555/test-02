@@ -1,4 +1,18 @@
 @font-face {
+  font-family: 'GothamPro';
+  src: url(../font/GothamPro.woff);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GilRoy';
+  src: url(../font/GothamPro.woff);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Montserrat';
   src: url(../font/Montserrat-Regular.woff);
   font-style: normal;
@@ -22,7 +36,7 @@
   font-display: swap;
 }
 body {
-  font-family: 'Montserrat';
+  font-family: 'GothamPro';
   color: $primary-text-color;
   background-color: $primary-background-color;
   overflow-x: hidden;

@@ -73,7 +73,7 @@
   &__language {
     background-color: transparent;
     border: none;
-   @include fonts($main-font, 14px, 1.2);
+    @include fonts($main-font, 14px, 1.2);
     color: $languages-color;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -90,7 +90,7 @@
   }
 
   &__text {
-    // font-family: Gilroy;
+    font-family: 'GilRoy';
     font-size: 12px;
     line-height: 1.33;
     color: $primary-background-color;

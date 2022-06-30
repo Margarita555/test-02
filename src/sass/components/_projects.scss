@@ -18,7 +18,7 @@
     content: '';
     display: block;
     width: 200px;
-    height: 2px;
+    height: 1px;
     background-color: $secondary-border-color;
     border-radius: 2px;
   }
@@ -50,6 +50,7 @@
   }
 
   &__button--left {
+    transform: rotate(180deg);
     margin-right: 10px;
     fill: $primary-text-color;
   }
@@ -91,14 +92,14 @@
 }
 
 .slick-slide {
-  margin: 0 -120px;
+  margin: 0 -130px;
 }
 
 .slick-track {
   display: flex;
 }
 .slick-list {
-  margin-left: 120px;
+  margin-left: 130px;
 }
 
 .img-magnifier-container {
