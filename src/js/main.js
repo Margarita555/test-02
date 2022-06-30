@@ -1,23 +1,48 @@
 // import $ from 'jquery';
 // import 'slick-carousel';
-$('.slider-for').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '.carousel',
-  initialSlide: 2,
-});
+// function initSlider(selector, options) {
+//   if ($.fn.slick) {
+//     $(selector).slick(options);
+//   } else {
+//     setTimeout(function () {
+//       initSlider(selector, options);
+//     }, 500);
+//   }
+// }
+// function initSlider() {
+//   $('.references').slick({
+//     dots: false,
+//     infinite: true,
+//     speed: 300,
+//     slidesToShow: 1,
+//     autoplay: true,
+//     prevArrow: '<div class="slick-prev"><i class="fa fa-chevron-left"></i></div>',
+//     nextArrow: '<div class="slick-next"><i class="fa fa-chevron-right"></i></div>',
+//   });
+// }
 
-$('.carousel').slick({
-  arrows: false,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  asNavFor: '.slider-for',
-  focusOnSelect: true,
-  dots: false,
-});
+// $(document).on('ready', function () {
+//   initSlider();
+// });
+$(document).ready(function () {
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.carousel',
+    initialSlide: 2,
+  });
 
+  $('.carousel').slick({
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    focusOnSelect: true,
+    dots: false,
+  });
+});
 // import magnify from './module/magnify';
 
 const magnifierIcon = document.querySelector('.magnifier-icon');
