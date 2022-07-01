@@ -1,15 +1,16 @@
-const { watch, series, parallel } = require("gulp");
-const browserSync = require("browser-sync").create();
+const { watch, series, parallel } = require('gulp');
+const browserSync = require('browser-sync').create();
 
-const path = require("./config/path");
-const app = require("./config/app");
+const path = require('./config/path');
+const app = require('./config/app');
 
-const clear = require("./task/clear.js");
-const html = require("./task/html.js");
-const scss = require("./task/scss.js");
-const js = require("./task/js.js");
-const img = require("./task/img.js");
-const font = require("./task/font.js");
+const clear = require('./task/clear.js');
+const html = require('./task/html.js');
+const scss = require('./task/scss.js');
+const js = require('./task/js.js');
+const img = require('./task/img.js');
+const font = require('./task/font.js');
+// const jsLibs = require('./task/jsLibs.js');
 
 const server = () => {
   browserSync.init({
@@ -20,21 +21,22 @@ const server = () => {
 };
 
 const watcher = () => {
-  watch(path.html.watch, html).on("all", browserSync.reload);
-  watch(path.scss.watch, scss).on("all", browserSync.reload);
-  watch(path.js.watch, js).on("all", browserSync.reload);
-  watch(path.img.watch, img).on("all", browserSync.reload);
-  watch(path.font.watch, font).on("all", browserSync.reload);
+  watch(path.html.watch, html).on('all', browserSync.reload);
+  watch(path.scss.watch, scss).on('all', browserSync.reload);
+  watch(path.js.watch, js).on('all', browserSync.reload);
+  watch(path.img.watch, img).on('all', browserSync.reload);
+  watch(path.font.watch, font).on('all', browserSync.reload);
+  // watch(path.jsLibs.watch, jsLibs).on('all', browserSync.reload);
 };
 
-const gulp = require("gulp");
-const ghPages = require("gulp-gh-pages");
+const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
 
 // gulp.task("deploy", function () {
 //   return gulp.src("./public/**/*").pipe(ghPages());
 // });
 function deploy(cb) {
-  return gulp.src("./public/**/*").pipe(ghPages());
+  return gulp.src('./public/**/*').pipe(ghPages());
 }
 
 const build = series(clear, parallel(html, scss, js, img, font));
@@ -54,4 +56,5 @@ exports.scss = scss;
 exports.js = js;
 exports.img = img;
 exports.font = font;
+// exports.jsLibs = font;
 exports.default = app.isProd ? build : dev;
