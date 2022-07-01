@@ -10,7 +10,6 @@ const scss = require('./task/scss.js');
 const js = require('./task/js.js');
 const img = require('./task/img.js');
 const font = require('./task/font.js');
-// const jsLibs = require('./task/jsLibs.js');
 
 const server = () => {
   browserSync.init({
@@ -26,7 +25,6 @@ const watcher = () => {
   watch(path.js.watch, js).on('all', browserSync.reload);
   watch(path.img.watch, img).on('all', browserSync.reload);
   watch(path.font.watch, font).on('all', browserSync.reload);
-  // watch(path.jsLibs.watch, jsLibs).on('all', browserSync.reload);
 };
 
 const gulp = require('gulp');
@@ -56,5 +54,4 @@ exports.scss = scss;
 exports.js = js;
 exports.img = img;
 exports.font = font;
-// exports.jsLibs = font;
 exports.default = app.isProd ? build : dev;

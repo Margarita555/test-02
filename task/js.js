@@ -11,8 +11,8 @@ const js = () => {
   return (
     src(['src/libs/jquery/dist/jquery.min.js', 'src/libs/slick.min.js', path.js.src], { sourcemaps: app.isDev })
       .pipe(concat('libs.min.js'))
-      // .pipe(uglify())
       .pipe(babel())
+      .pipe(uglify())
       // .pipe(webpack(app.webpack))
       .pipe(dest(path.js.dest, { sourcemaps: app.isDev }))
   );
