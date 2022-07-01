@@ -1,5 +1,6 @@
+// $(document).on('ready', function () {
 $('body').text('rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrssssssssssssssssssssssssssssffffffffffffffffffffgggggggggggggggggggggggggggggggggggghhhhhhhhhhhhhhhhhhhhhhhhhjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj');
-
+// });
 // import $ from 'jquery';
 // import 'slick-carousel';
 // function initSlider(selector, options) {
