@@ -20,7 +20,7 @@ const magnifierIcon = document.querySelector('.magnifier-icon');
 const carouselContainer = document.querySelector('.carousel-wrapper');
 
 magnifierIcon.addEventListener('mouseover', magnify);
-carouselContainer.addEventListener('click', magnify);
+carouselContainer.addEventListener('mousedown', magnify);
 function magnify() {
   const currentImage = document.querySelector('.slick-current > img');
   if (currentImage.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {
@@ -34,7 +34,6 @@ function magnify() {
   glass.setAttribute('class', 'img-magnifier-glass');
   currentImage.parentElement.insertBefore(glass, currentImage);
   glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
-  console.log(magnifierIcon.childNodes[0].src);
   glass.style.backgroundRepeat = 'no-repeat';
   glass.style.left = '200px';
   glass.style.top = '500px';
