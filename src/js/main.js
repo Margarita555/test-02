@@ -23,7 +23,6 @@ magnifierIcon.addEventListener('mouseover', magnify);
 carouselContainer.addEventListener('click', magnify);
 function magnify() {
   const currentImage = document.querySelector('.slick-current > img');
-  // console.log(currentImage.src);
   if (currentImage.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {
     return;
   }
@@ -34,8 +33,8 @@ function magnify() {
   glass = document.createElement('DIV');
   glass.setAttribute('class', 'img-magnifier-glass');
   currentImage.parentElement.insertBefore(glass, currentImage);
-  glass.style.backgroundImage = 'url("./img/projects-images/magnifier.svg")';
-  // url('http://localhost:3000/img/projects-images/gym-three-3x.jpg');
+  glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
+  console.log(magnifierIcon.childNodes[0].src);
   glass.style.backgroundRepeat = 'no-repeat';
   glass.style.left = '200px';
   glass.style.top = '500px';
@@ -69,7 +68,6 @@ function magnify() {
       setMagnifyingIcon();
     } else if (x > 30 && x < 1040 && y > 30 && y < 766) {
       glass.style.backgroundImage = "url('" + currentImage.src + "')";
-      // console.log(glass.style.backgroundImage);
       glass.style.borderColor = '#fff';
       glass.style.borderWidth = '3px';
       glass.style.borderStyle = 'solid';
