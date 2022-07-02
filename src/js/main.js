@@ -91,7 +91,7 @@ function magnify() {
     return { x: x, y: y };
   }
   function setMagnifyingIcon() {
-    glass.style.backgroundImage = 'url("../img/projects-images/magnifier.svg")';
+    glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
     glass.style.backgroundSize = '120px 120px';
     glass.style.backgroundPosition = '0px 0px';
     glass.style.border = 'none';
