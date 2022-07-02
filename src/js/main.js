@@ -20,7 +20,8 @@ const magnifierIcon = document.querySelector('.magnifier-icon');
 const carouselContainer = document.querySelector('.carousel-wrapper');
 
 magnifierIcon.addEventListener('mouseover', magnify);
-carouselContainer.addEventListener('mousedown', magnify);
+carouselContainer.addEventListener('click', magnify);
+carouselContainer.addEventListener('mouseup', magnify);
 function magnify() {
   const currentImage = document.querySelector('.slick-current > img');
   if (currentImage.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {
