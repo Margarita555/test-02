@@ -14,6 +14,16 @@ $('.carousel').slick({
   asNavFor: '.slider-for',
   focusOnSelect: true,
   dots: false,
+  variableWidth: true,
+});
+
+$('.blog__carousel').slick({
+  arrows: false,
+  dots: false,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  variableWidth: true,
 });
 
 const magnifierIcon = document.querySelector('.magnifier-icon');

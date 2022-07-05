@@ -35,6 +35,7 @@
     max-width: 540px;
     margin-right: 0px;
     margin-left: auto;
+    z-index: 40;
   }
 
   &__box--buttons {
@@ -78,28 +79,22 @@
     position: absolute;
     left: -180px;
     bottom: -345px;
+    max-width: 941px;
+    overflow: hidden;
+
     z-index: 10;
   }
-}
-
-.carousel-wrapper {
-  max-width: 941px;
-  overflow: hidden;
+  .slick-slide {
+    width: 367px;
+  }
 }
 
 .carousel__item {
   width: 327px;
 }
 
-.slick-slide {
-  margin: 0 -130px;
-}
-
 .slick-track {
   display: flex;
-}
-.slick-list {
-  margin-left: 130px;
 }
 
 .img-magnifier-container {
