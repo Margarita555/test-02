@@ -187,6 +187,7 @@ img {
   padding-right: 10px;
   text-transform: uppercase;
   color: #40474e;
+  cursor: pointer;
 }
 
 .select-css:hover,
