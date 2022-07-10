@@ -26,6 +26,17 @@ $('.blog__carousel').slick({
   variableWidth: true,
 });
 
+$('.hero__carousel').slick({
+  arrows: true,
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: document.querySelector('.arrow-right'),
+  prevArrow: document.querySelector('.arrow-left'),
+  appendDots: $('.dots__list'),
+});
+
 const magnifierIcon = document.querySelector('.magnifier-icon');
 const carouselContainer = document.querySelector('.carousel-wrapper');
 
@@ -33,7 +44,7 @@ magnifierIcon.addEventListener('mouseover', magnify);
 carouselContainer.addEventListener('click', magnify);
 carouselContainer.addEventListener('mouseup', magnify);
 function magnify() {
-  const currentImage = document.querySelector('.slick-current > img');
+  const currentImage = document.querySelector('.slider-for .slick-current > img');
   if (currentImage.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {
     return;
   }

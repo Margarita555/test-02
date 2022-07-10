@@ -50,11 +50,6 @@
     @include fonts($main-font, 14px, 1.2);
     color: $primary-background-color;
   }
-
-  &__brand {
-    @include fonts($main-font, 14px, 1.2);
-    color: $primary-background-color;
-  }
 }
 
 .basement {
@@ -68,6 +63,7 @@
     @include fonts($main-font, 14px, 1.2);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   &__language {

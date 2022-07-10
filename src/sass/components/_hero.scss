@@ -1,23 +1,36 @@
 .hero {
-  position: relative;
-
   &__container {
     position: relative;
+    padding-top: 385px;
+    padding-bottom: 61px;
+    z-index: 48;
+    height: 913px;
+  }
+  &__carousel-wrapper {
+    position: relative;
+  }
+
+  &__carousel {
+    position: absolute;
+    max-width: 1920px;
+    height: 913px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
   }
 
   &__image {
     position: relative;
-    padding-top: 385px;
-    padding-bottom: 61px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1920px;
+  }
 
-    background-image: linear-gradient($hero-background-color, $hero-background-color), url(../img/hero-image-1x.jpg);
-
-    @media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient($hero-background-color, $hero-background-color), url(../img/hero-image-2x.jpg);
-    }
+  .layout {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient($hero-background-color, $hero-background-color);
   }
 
   &__title {
@@ -37,7 +50,7 @@
 .social {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,27 +80,39 @@
   }
 }
 
-.dots__list {
+.slick-dots {
   display: flex;
   align-items: center;
-}
-.dots__item {
-  width: 5px;
-  height: 5px;
-  border-radius: 50px;
-  background-color: #fff;
-}
+  margin: 0;
+  padding: 0;
 
-.dots__item.active {
-  width: 15px;
-  height: 15px;
-  border-radius: 50px;
-  border: 2px solid $primary-background-color;
-  background-color: transparent;
-}
+  li {
+    list-style: none;
+    display: flex;
+  }
 
-.dots__item:not(:last-child) {
-  margin-right: 17px;
+  li:not(:last-child) {
+    margin-right: 17px;
+  }
+
+  button {
+    font-size: 0;
+    padding: 0;
+    border: none;
+    border: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #fff;
+  }
+
+  li.slick-active button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    border: 2px solid $primary-background-color;
+    background-color: transparent;
+  }
 }
 
 .arrow-right {
