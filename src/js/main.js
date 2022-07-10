@@ -34,7 +34,7 @@ $('.hero__carousel').slick({
   slidesToScroll: 1,
   nextArrow: document.querySelector('.arrow-right'),
   prevArrow: document.querySelector('.arrow-left'),
-  appendDots: $('.dots__list'),
+  appendDots: $('.dots__container'),
 });
 
 const magnifierIcon = document.querySelector('.magnifier-icon');
