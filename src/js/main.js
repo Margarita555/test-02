@@ -1,7 +1,9 @@
 $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: false,
+  arrows: true,
+  nextArrow: document.querySelector('.projects__button--right'),
+  prevArrow: document.querySelector('.projects__button--left'),
   fade: true,
   asNavFor: '.carousel',
   initialSlide: 2,
@@ -39,10 +41,12 @@ $('.hero__carousel').slick({
 
 const magnifierIcon = document.querySelector('.magnifier-icon');
 const carouselContainer = document.querySelector('.carousel-wrapper');
+const buttonsContainer = document.querySelector('.carousel-buttons');
 
 magnifierIcon.addEventListener('mouseover', magnify);
 carouselContainer.addEventListener('click', magnify);
 carouselContainer.addEventListener('mouseup', magnify);
+buttonsContainer.addEventListener('click', magnify);
 function magnify() {
   const currentImage = document.querySelector('.slider-for .slick-current > img');
   if (currentImage.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {

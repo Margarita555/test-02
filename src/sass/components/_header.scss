@@ -1,7 +1,16 @@
+.header {
+  position: relative;
+  z-index: 69;
+}
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__icon {
+  margin-top: 4px;
+  margin-bottom: 3px;
 }
 
 .header__button {
@@ -29,16 +38,15 @@
   }
 
   &__item:not(:last-child) {
-    margin-right: 42px;
+    margin-right: 40px;
   }
 }
 
 .service {
   display: flex;
-  justify-content: space-between;
 
   &__item:not(:last-child) {
-    margin-right: 13px;
+    margin-right: 26px;
   }
 
   &__icon {
@@ -56,43 +64,68 @@
   }
 }
 
-.favourite {
+.square {
   position: absolute;
-  top: -4px;
+  top: -3px;
   right: -7px;
   display: block;
-  width: 12px;
-  height: 13px;
+  width: 14.7px;
+  height: 14.7px;
   background-color: $accent-color;
   color: $primary-background-color;
   transform: rotate(15deg);
-  text-align: center;
-  font-size: 10px;
 }
 
-.select-css {
-  display: block;
-  border: none;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  padding-right: 10px;
-
-  background-image: url(../img/arrow-drop-down.svg);
-  background-repeat: no-repeat, repeat;
-  background-position: right -1px top 50%, 0 0;
-  background-size: 0.95em auto, 100%;
-  @include fonts($main-font, 16px, 1.6);
-  text-transform: uppercase;
-  color: $primary-text-color;
-  cursor: pointer;
+.favourite {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  transform: rotate(-15deg);
+  font-size: 8px;
 }
 
-.select-css:hover,
-.select-css:focus {
-  outline: none;
-}
+.dropdown {
+  position: relative;
+  width: 44px;
+  z-index: 70px;
+  &__button {
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    @include fonts($main-font, 16px, 1.6);
+    text-transform: uppercase;
+    color: $primary-text-color;
+    cursor: pointer;
+  }
 
-.select-css option:checked {
+  .dropdown__button::after {
+    position: absolute;
+    content: '';
+    top: 40%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 4px solid $primary-text-color;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+  }
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 100%;
+  }
+
+  &__item {
+    padding: 4px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+.is-visible {
   display: none;
 }

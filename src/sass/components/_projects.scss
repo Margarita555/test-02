@@ -44,6 +44,7 @@
   }
 
   &__button--arrow {
+    font-size: 0;
     padding: 20px 15px 18px 15px;
     border: 1px solid $border-color;
     background-color: $primary-background-color;
@@ -52,7 +53,7 @@
 
   &__button--left {
     transform: rotate(180deg);
-    margin-right: 10px;
+    margin-right: 15px;
     fill: $primary-text-color;
   }
 

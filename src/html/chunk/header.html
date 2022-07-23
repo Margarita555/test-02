@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container header__container">
-    <svg class="icon" aria-label="Menu" width="96" height="86">
+    <svg class="header__icon" aria-label="Menu" width="96" height="86">
       <use class="logo header__logo" href="./img/icons.svg#logo"></use>
     </svg>
 
@@ -23,11 +23,12 @@
         <a href="#" class="link site-nav__link">Контакты</a>
       </li>
       <li class="site-nav__item item">
-        <select name="" id="" class="select-css">
-          <option>Ru</option>
-          <option>Ukr</option>
-          <option>En</option>
-        </select>
+        <div class="dropdown">
+          <button class="dropdown__button">Ru</span></button>
+          <ul class="dropdown__list list is-visible">
+            <li class="dropdown__item">Ukr</li>
+          </ul>
+        </div>
       </li>
     </ul>
 
@@ -38,18 +39,18 @@
         </svg>
       </li>
       <li class="service__item">
-        <svg class="service__icon" width="22" height="22">
+        <svg class="service__icon" width="24" height="24">
           <use href="./img/icons.svg#weights"></use>
         </svg>
       </li>
       <li class="service__item service__item--heart">
-        <svg class="service__icon" width="22" height="20">
+        <svg class="service__icon" width="24" height="24">
           <use href="./img/icons.svg#heart"></use>
         </svg>
-        <span class="favourite">10</span>
+        <span class="square"><span class="favourite">10</span></span>
       </li>
       <li class="service__item">
-        <svg class="service__icon" width="19" height="20">
+        <svg class="service__icon" width="24" height="24">
           <use href="./img/icons.svg#person"></use>
         </svg>
       </li>

@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/main.min.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   </head>
   <body>
     <header class="header">
   <div class="container header__container">
-    <svg class="icon" aria-label="Menu" width="96" height="86">
+    <svg class="header__icon" aria-label="Menu" width="96" height="86">
       <use class="logo header__logo" href="./img/icons.svg#logo"></use>
     </svg>
 
@@ -37,11 +36,12 @@
         <a href="#" class="link site-nav__link">Контакты</a>
       </li>
       <li class="site-nav__item item">
-        <select name="" id="" class="select-css">
-          <option>Ru</option>
-          <option>Ukr</option>
-          <option>En</option>
-        </select>
+        <div class="dropdown">
+          <button class="dropdown__button">Ru</button>
+          <ul class="dropdown__list list is-visible">
+            <li class="dropdown__item">Ukr</li>
+          </ul>
+        </div>
       </li>
     </ul>
 
@@ -52,18 +52,18 @@
         </svg>
       </li>
       <li class="service__item">
-        <svg class="service__icon" width="22" height="22">
+        <svg class="service__icon" width="24" height="24">
           <use href="./img/icons.svg#weights"></use>
         </svg>
       </li>
       <li class="service__item service__item--heart">
-        <svg class="service__icon" width="22" height="20">
+        <svg class="service__icon" width="24" height="24">
           <use href="./img/icons.svg#heart"></use>
         </svg>
-        <span class="favourite">10</span>
+        <span class="square"><span class="favourite">10</span></span>
       </li>
       <li class="service__item">
-        <svg class="service__icon" width="19" height="20">
+        <svg class="service__icon" width="24" height="24">
           <use href="./img/icons.svg#person"></use>
         </svg>
       </li>
@@ -146,67 +146,6 @@
           </div>
     </div>
   </div>
-
-  <!-- <div class="hero__image"> -->
-  <!-- <div class="container hero__container">
-          <h1 class="hero__title">
-            Керамика <br />
-            для ваших идей
-          </h1>
-          <p class="hero__text">
-            Лучшие европейские коллекции <br />керамики и керамогранита 
-          </p>
-          <ul class="social list">
-            <li class="social__item">
-              <a href="#" class="link">
-              <svg class="icon" width="27" height="27">
-                <use href="./img/icons.svg#facebook"></use>
-              </svg>
-            </a>
-              <li class="social__item">
-                <a href="#" class="link">
-              <svg class="icon" width="27" height="27">
-                <use href="./img/icons.svg#instagram"></use>
-              </svg>
-            </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="link">
-              <svg class="icon" width="32" height="32">
-                <use href="./img/icons.svg#youtube"></use>
-              </svg>
-            </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="link">
-              <svg class="icon" width="27" height="27">
-                <use href="./img/icons.svg#pinterest"></use>
-              </svg>
-              </a>
-            </li>
-            </li>
-          </ul>
-          <div class="control-panel">
-            <ul class="dots__list list">
-              <li class="dots__item"></li>
-              <li class="dots__item"></li>
-              <li class="dots__item active"></li>
-            </ul>
-            <svg class="icon" width="26" height="47">
-                <use href="./img/icons.svg#mouse"></use>
-              </svg>
-            <div class="control-panel__arrows">
-              <svg class="arrow-left" width="30" height="11">
-                <use href="./img/icons.svg#arrow-right"></use>
-              </svg>
-               <span class="control-panel__separator"></span>
-              <svg class="arrow-right" width="30" height="11">
-                <use href="./img/icons.svg#arrow-right"></use>
-              </svg>
-            </div>
-          </div>
-        </div> -->
-  <!-- </div> -->
 </section>
  <section class="projects section">
   <div class="container projects__container">
@@ -239,13 +178,11 @@
       <div class="projects__box">
         <div class="projects__box--buttons">
           <button type="button" class="projects__button button">Смотреть все проекты</button>
-          <div>
+          <div class="carousel-buttons">
             <button type="button" class="projects__button--arrow projects__button--left">
               <svg width="26" height="17">
                 <use href="./img/icons.svg#arrow-right"></use>
-              </svg>
-            </button>
-            <button type="button" class="projects__button--arrow projects__button--right">
+              </svg></button><button type="button" class="projects__button--arrow projects__button--right">
               <svg width="26" height="17">
                 <use href="./img/icons.svg#arrow-right"></use>
               </svg>
@@ -456,7 +393,7 @@
 
       <input class="form__input" type="tel" name="tel" id="tel" placeholder="*Телефон">
 
-      <input class="form__input" type="email" name="email" id="email" placeholder="*Email">
+      <input class="form__input" type="email" name="email" id="email" placeholder="Email">
 
       <textarea class="form__input form__message" name="message" id="message" rows="5" placeholder="*Сообщение"></textarea>
 
@@ -593,13 +530,7 @@
     </div>
     <div class="basement">
       <span class="basement__rights">Ceramica &copy; 2020</span>
-      <div>
-        <button type="button" class="basement__language">UA</button>
-        <span class="separator">|</span>
-        <button type="button" class="basement__language">RU</button>
-        <span class="separator">|</span>
-        <button type="button" class="basement__language">EN</button>
-      </div>
+      <div class="language-container"><button type="button" class="basement__language">UA</button><span class="separator">|</span><button type="button" class="basement__language">RU</button><span class="separator">|</span><button type="button" class="basement__language">EN</button></div>
       <div class="basement__development">
         <p class="basement__text">Разработка и поддержка сайта —</p>
         <svg class="basement__icon" width="51" height="16">
@@ -611,14 +542,6 @@
 </footer>
 
 
-    <!-- ===================================================================== -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <!-- <script src="../libs/slick.min.js"></script> -->
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
-    <!-- <script src="../js/slick.min.js" async></script> -->
-    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script> -->
     <script src="./js/libs.min.js"></script>
-    <!-- <script src="../js/main.js"></script> -->
   </body>
 </html>

@@ -1,9 +1,9 @@
 .form {
   position: absolute;
   right: 67px;
-  top: 85px;
+  top: 96px;
   background-color: $primary-background-color;
-  padding: 76px 140px 100px;
+  padding: 76px 153px 104px 112px;
 
   &__section {
     background-color: $background-color;
@@ -27,7 +27,7 @@
 
   &__input {
     padding: 13px 20px;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
     display: block;
     width: 100%;
     border: 1px solid $instagram-background-color;

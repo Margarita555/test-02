@@ -17,7 +17,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
 
   &__button--arrow {
@@ -37,7 +37,7 @@
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
-    max-width: 130px;
+    max-width: 132px;
   }
 
   &__title {
@@ -47,8 +47,20 @@
   }
 
   &__link {
+    position: relative;
     @include fonts($main-font, 14px, 1.2);
     color: $primary-background-color;
+  }
+
+  &__link:hover::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    left: 0;
+    bottom: -4px;
   }
 }
 
@@ -57,22 +69,15 @@
   justify-content: space-between;
 
   &__language {
+    margin: 0;
+    padding: 0;
     background-color: transparent;
     border: none;
-    color: $languages-color;
     @include fonts($main-font, 14px, 1.2);
+    color: $languages-color;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     cursor: pointer;
-  }
-
-  &__language {
-    background-color: transparent;
-    border: none;
-    @include fonts($main-font, 14px, 1.2);
-    color: $languages-color;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
   }
 
   &__language:hover,
@@ -103,4 +108,6 @@
 
 .separator {
   color: $primary-background-color;
+  margin-left: 8px;
+  margin-right: 8px;
 }
