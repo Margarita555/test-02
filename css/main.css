@@ -62,9 +62,9 @@ img {
 }
 
 .button {
-  font: 14px/1.15 Gotham Pro;
+  font: 14px/1.15 "GothamPro";
   background: transparent;
-  padding: 20px 45px 18px 45px;
+  padding: 20px 45px 16px 45px;
   color: #6b97bb;
   border: 1px solid #6b97bb;
   text-transform: uppercase;
@@ -90,6 +90,11 @@ img {
   fill: #ffffff;
 }
 
+.header {
+  position: relative;
+  z-index: 69;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,6 +105,11 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.header__icon {
+  margin-top: 4px;
+  margin-bottom: 3px;
 }
 
 .header__button {
@@ -130,20 +140,17 @@ img {
 }
 
 .site-nav__item:not(:last-child) {
-  margin-right: 42px;
+  margin-right: 40px;
 }
 
 .service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .service__item:not(:last-child) {
-  margin-right: 13px;
+  margin-right: 26px;
 }
 
 .service__icon {
@@ -160,42 +167,75 @@ img {
   fill: #aa182c;
 }
 
-.favourite {
+.square {
   background: #aa182c;
   position: absolute;
-  top: -4px;
+  top: -3px;
   right: -7px;
   display: block;
-  width: 12px;
-  height: 13px;
+  width: 14.7px;
+  height: 14.7px;
   color: #ffffff;
   -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
-  text-align: center;
-  font-size: 10px;
 }
 
-.select-css {
+.favourite {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  -webkit-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  font-size: 8px;
+}
+
+.dropdown {
+  position: relative;
+  width: 44px;
+  z-index: 70px;
+}
+
+.dropdown__button {
   font: 16px/1.6 "GothamPro", sans serif;
-  background: url(../img/arrow-drop-down.svg) no-repeat right -1px top 50%/0.95em auto;
+  background: transparent;
+  padding: 0;
   display: block;
+  width: 100%;
+  text-align: left;
   border: none;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  padding-right: 10px;
   text-transform: uppercase;
   color: #40474e;
   cursor: pointer;
 }
 
-.select-css:hover,
-.select-css:focus {
-  outline: none;
+.dropdown .dropdown__button::after {
+  position: absolute;
+  content: "";
+  top: 40%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #40474e;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
 }
 
-.select-css option:checked {
+.dropdown__list {
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 100%;
+}
+
+.dropdown__item {
+  padding: 5px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.is-visible {
   display: none;
 }
 
@@ -238,6 +278,16 @@ img {
   background: linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.45));
 }
 
+.hero .layout::before {
+  background: #cfdae3;
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 10px;
+  z-index: 60;
+}
+
 .hero__title {
   font: 86px/1 "GothamPro", sans serif;
   padding-top: 55px;
@@ -253,7 +303,7 @@ img {
 
 .social {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 360px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,8 +373,7 @@ img {
 .slick-dots button {
   background: #fff;
   font-size: 0;
-  padding: 0;
-  border: none;
+  padding: 1px;
   border: none;
   width: 5px;
   height: 5px;
@@ -404,7 +453,8 @@ img {
 
 .projects__button--arrow {
   background: #ffffff;
-  padding: 20px 15px 18px 15px;
+  font-size: 0;
+  padding: 20px 15px 15px 15px;
   border: 1px solid #98a4ae;
   cursor: pointer;
 }
@@ -413,7 +463,7 @@ img {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  margin-right: 10px;
+  margin-right: 15px;
   fill: #40474e;
 }
 
@@ -511,6 +561,10 @@ img {
   border-radius: 2px;
 }
 
+.blog__button {
+  padding: 20px 62px 16px 62px;
+}
+
 .blog__carousel {
   width: 1695px;
   overflow: hidden;
@@ -546,7 +600,7 @@ img {
   -ms-flex: 1;
   flex: 1;
   max-width: 380px;
-  padding: 24px 20px;
+  padding: 20px 20px 15px 20px;
   border: 2px solid #cfdae3;
   border-top: none;
 }
@@ -558,7 +612,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .blog__subtitle {
@@ -611,7 +665,7 @@ img {
 }
 
 .blog__counter {
-  margin-left: 5px;
+  margin-left: 6px;
   font-size: 12px;
   color: #6a737a;
 }
@@ -659,7 +713,7 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 70px;
+  padding-top: 71px;
 }
 
 .instagram__link {
@@ -709,9 +763,10 @@ img {
 .form {
   background: #ffffff;
   position: absolute;
-  right: 67px;
-  top: 85px;
-  padding: 76px 140px 100px;
+  right: 82px;
+  top: 96px;
+  width: 735px;
+  padding: 76px 153px 104px 112px;
 }
 
 .form__section {
@@ -736,7 +791,7 @@ img {
 .form__input {
   font: 300 16px/1.4 "GothamPro", sans serif;
   padding: 13px 20px;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
   display: block;
   width: 100%;
   border: 1px solid #cfdae3;
@@ -764,16 +819,16 @@ img {
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr) 262px;
+  grid-template-columns: 251px 201px 198px 258px 1fr 262px;
 }
 
 .footer__column--double {
   display: grid;
-  grid-auto-rows: minmax(140px, auto);
+  grid-auto-rows: minmax(150px, auto);
 }
 
 .footer__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 .footer__button--arrow {
@@ -797,7 +852,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 130px;
+  max-width: 132px;
 }
 
 .footer__title {
@@ -808,7 +863,19 @@ img {
 
 .footer__link {
   font: 14px/1.2 "GothamPro", sans serif;
+  position: relative;
   color: #ffffff;
+}
+
+.footer__link:hover::after {
+  background: #fff;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  left: 0;
+  bottom: -4px;
 }
 
 .basement {
@@ -823,20 +890,13 @@ img {
 .basement__language {
   font: 14px/1.2 "GothamPro", sans serif;
   background: transparent;
+  margin: 0;
+  padding: 0;
   border: none;
   color: rgba(255, 255, 255, 0.4);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
-}
-
-.basement__language {
-  font: 14px/1.2 "GothamPro", sans serif;
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 .basement__language:hover,
@@ -866,6 +926,8 @@ img {
 
 .separator {
   color: #ffffff;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 @media screen and (min-width: 1500px) {
