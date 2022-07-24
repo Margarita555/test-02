@@ -8,12 +8,13 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr) 262px;
+    grid-template-columns: 251px 201px 198px 258px 1fr 262px;
+    // grid-template-columns: repeat(5, 1fr) 262px;
   }
 
   &__column--double {
     display: grid;
-    grid-auto-rows: minmax(140px, auto);
+    grid-auto-rows: minmax(150px, auto);
   }
 
   &__item:not(:last-child) {
