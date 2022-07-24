@@ -887,6 +887,10 @@ img {
   justify-content: space-between;
 }
 
+.basement .language-container {
+  margin-left: 105px;
+}
+
 .basement__language {
   font: 14px/1.2 "GothamPro", sans serif;
   background: transparent;
