@@ -47,30 +47,66 @@ magnifierIcon.addEventListener('mouseover', magnify);
 carouselContainer.addEventListener('click', magnify);
 carouselContainer.addEventListener('mouseup', magnify);
 buttonsContainer.addEventListener('click', magnify);
+
+// magnifierIcon.addEventListener('touchmove', magnify);
+// window.addEventListener(
+//   'touchmove',
+//   function (event) {
+//     // some logic
+//     event.stopPropagation();
+//     event.preventDefault(); // <-- that should not be used in passive
+//     // some other magic
+//   },
+//   { passive: false },
+// );
+// magnifierIcon.addEventListener('touchstart', magnify);
+magnifierIcon.addEventListener('touchmove', magnify);
+
+carouselContainer.addEventListener('touchstart', magnify);
+carouselContainer.addEventListener('touchend', magnify);
+buttonsContainer.addEventListener('touchstart', magnify);
 function magnify() {
+  // event.stopPropagation();
+  // event.preventDefault();
   const currentImage = document.querySelector('.slider-for .slick-current > img');
   if (currentImage.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {
     return;
   }
   magnifierIcon.classList.add('invisible');
+  // event.stopPropagation();
+  // event.preventDefault();
   const zoom = 3;
   let glass, w, h, bw;
 
   glass = document.createElement('DIV');
   glass.setAttribute('class', 'img-magnifier-glass');
+  console.log('current', currentImage);
+  console.log('current.parent', currentImage.parentElement);
+  console.log('glass', glass);
+  console.log('glass', glass);
   currentImage.parentElement.insertBefore(glass, currentImage);
   glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
   glass.style.backgroundRepeat = 'no-repeat';
   glass.style.left = '200px';
   glass.style.top = '500px';
   bw = 3;
+  // if (event.targetTouches.length == 1) {
+  //   var touch = event.targetTouches[0];
+  //   touchOffsetX = touch.pageX - touch.target.offsetLeft;
+  //   touchOffsetY = touch.pageY - touch.target.offsetTop;
+  // }
+  console.log(glass.offsetWidth, 'offset');
   w = glass.offsetWidth / 2;
   h = glass.offsetHeight / 2;
-
+  console.log('a');
   glass.addEventListener('mousemove', moveMagnifier);
   currentImage.addEventListener('mousemove', moveMagnifier);
-
+  glass.addEventListener('touchstart', moveMagnifier);
+  glass.addEventListener('touchmove', moveMagnifier);
+  currentImage.addEventListener('touchmove', moveMagnifier);
+  console.log('b');
   function moveMagnifier(e) {
+    console.log('c');
     var pos, x, y;
     e.preventDefault();
     pos = getCursorPos(e);
@@ -101,6 +137,7 @@ function magnify() {
       glass.style.top = y - h + 'px';
       glass.style.backgroundPosition = '-' + (x * zoom - w + bw) + 'px -' + (y * zoom - h + bw) + 'px';
     }
+    console.log('d');
   }
 
   function getCursorPos(e) {
@@ -109,11 +146,26 @@ function magnify() {
       y = 0;
     e = e || window.event;
     a = currentImage.getBoundingClientRect();
-    x = e.pageX - a.left;
-    y = e.pageY - a.top;
+
+    let pos_x = e.pageX || e.changedTouches[0].pageX;
+    let pos_y = e.pageY || e.changedTouches[0].pageY;
+    // console.log(e.pageX, e.changedTouches[0].pageX);
+    console.log(pos_x, a.left);
+    x = pos_x - a.left;
+    y = pos_y - a.top;
     x = x - window.pageXOffset;
     y = y - window.pageYOffset;
     return { x: x, y: y };
+    // let a,
+    //   x = 0,
+    //   y = 0;
+    // e = e || window.event;
+    // a = currentImage.getBoundingClientRect();
+    // x = e.pageX - a.left;
+    // y = e.pageY - a.top;
+    // x = x - window.pageXOffset;
+    // y = y - window.pageYOffset;
+    // return { x: x, y: y };
   }
   function setMagnifyingIcon() {
     glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";

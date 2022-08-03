@@ -54,21 +54,42 @@ img {
   line-height: 1.21;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    font-size: 18px;
+  }
+  // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+
+  // }
+  // @media screen and (min-width: $desktop) {
+
+  // }
 }
 
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-}
 
-@media screen and (min-width: 1500px) {
-  .container {
-    max-width: 1500px;
+  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    max-width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    max-width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
   }
 }
 
-@media screen and (min-width: 1500px) {
+// @media screen and (min-width: 1500px) {
+//   .container {
+//     max-width: 1500px;
+//   }
+// }
+
+@media screen and (min-width: $desktop) {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;

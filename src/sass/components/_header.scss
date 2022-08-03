@@ -13,6 +13,15 @@
   margin-bottom: 3px;
 }
 
+.menu-icon {
+  @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
 .header__button {
   padding: 13px 35px 11px 35px;
   background-color: $primary-background-color;
@@ -21,7 +30,14 @@
 }
 
 .site-nav {
-  display: flex;
+  // display: flex;
+  // display: none;
+  @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 
   &__link {
     @include fonts($main-font, 16px, 1.6);
@@ -43,7 +59,13 @@
 }
 
 .service {
-  display: flex;
+  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 
   &__item:not(:last-child) {
     margin-right: 26px;

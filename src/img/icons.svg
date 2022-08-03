@@ -1,5 +1,10 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+<symbol id="menu" viewBox="0 0 48 32">
+<path d="M48 3.2h-48v-3.2h48v3.2z"></path>
+<path d="M48 17.6h-48v-3.2h48v3.2z"></path>
+<path d="M48 32h-48v-3.2h48v3.2z"></path>
+</symbol>
 <symbol id="logo" viewBox="0 0 36 32">
 <path fill="#aa182c" style="fill: var(--color1, #aa182c)" d="M17.738 0l-16 16 16 16 16-16-16-16zM21.494 19.755l-7.511 0.001-0-7.512 7.512 0-0.001 7.511zM17.521 8.181l-7.602 7.602-3.62-3.62 7.602-7.602 3.62 3.62zM17.956 23.819l7.602-7.602 3.62 3.62-7.602 7.602-3.62-3.62zM25.557 15.782l-7.601-7.601 3.62-3.62 7.601 7.601-3.62 3.62zM9.919 16.218l7.601 7.601-3.619 3.619-7.601-7.601 3.619-3.619z"></path>
 <path fill="#40474e" style="fill: var(--color2, #40474e)" d="M0 11.907h35.721v8.186h-35.721v-8.186z"></path>
