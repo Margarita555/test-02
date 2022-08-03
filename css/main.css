@@ -299,10 +299,6 @@ img {
   align-items: center;
 }
 
-.social__item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
 .control-panel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,9 +319,6 @@ img {
   background: #fff;
   position: absolute;
   content: "";
-  height: 34px;
-  width: 1.5px;
-  top: -6px;
   left: 0;
 }
 
@@ -356,21 +349,16 @@ img {
   font-size: 0;
   padding: 1px;
   border: none;
-  width: 5px;
-  height: 5px;
   border-radius: 50px;
 }
 
 .slick-dots li.slick-active button {
   background: transparent;
-  width: 15px;
-  height: 15px;
   border-radius: 50px;
   border: 2px solid #ffffff;
 }
 
 .arrow-right {
-  margin-left: 40px;
   fill: #aa182c;
   cursor: pointer;
 }
@@ -380,7 +368,6 @@ img {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   fill: #ffffff;
-  margin-right: 40px;
   cursor: pointer;
 }
 
@@ -439,13 +426,14 @@ img {
 }
 
 .projects__subtitle {
-  font: 44px/1.3 "GothamPro", sans serif;
-  margin-top: 85px;
-  margin-bottom: 40px;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.3;
 }
 
 .projects__text {
-  font: 300 18px/1.4 "GothamPro", sans serif;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.4;
+  font-weight: 300;
 }
 
 .projects__text:not(:last-child) {
@@ -470,8 +458,6 @@ img {
 .img-magnifier-glass {
   position: absolute;
   cursor: none;
-  width: 120px;
-  height: 120px;
   z-index: 100;
 }
 
@@ -939,8 +925,45 @@ img {
     top: 360px;
   }
 
+  .social .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   .control-panel {
     margin-top: 78px;
+  }
+
+  .control-panel__separator::after {
+    height: 34px;
+    width: 1.5px;
+    top: 0;
+  }
+
+  .control-panel__arrows svg {
+    width: 30px;
+  }
+
+  .slick-dots button {
+    width: 5px;
+    height: 5px;
+  }
+
+  .slick-dots li.slick-active button {
+    width: 15px;
+    height: 15px;
+  }
+
+  .arrow-right {
+    margin-left: 40px;
+  }
+
+  .arrow-left {
+    margin-right: 36px;
   }
 
   .projects__container {
@@ -960,6 +983,16 @@ img {
     z-index: 40;
   }
 
+  .projects__subtitle {
+    margin-top: 85px;
+    margin-bottom: 40px;
+    font-size: 44px;
+  }
+
+  .projects__text {
+    font-size: 18px;
+  }
+
   .projects .carousel-wrapper {
     position: absolute;
     left: -180px;
@@ -976,6 +1009,11 @@ img {
     width: 327px;
   }
 
+  .img-magnifier-glass {
+    width: 120px;
+    height: 120px;
+  }
+
   .magnifier-icon {
     left: -28px;
     top: 500px;
@@ -986,13 +1024,13 @@ img {
   }
 }
 
-@media screen and (min-width: 460px) and (max-width: 768px) {
+@media screen and (min-width: 360px) and (max-width: 768px) {
   .title {
     font-size: 18px;
   }
 
   .container {
-    max-width: 460px;
+    max-width: 360px;
   }
 
   .service {
@@ -1000,7 +1038,7 @@ img {
   }
 
   .hero__container {
-    padding-top: 45px;
+    padding-top: 20px;
     height: 365px;
   }
 
@@ -1010,14 +1048,14 @@ img {
   }
 
   .hero__title {
-    font-size: 38px;
+    font-size: 36px;
     line-height: 1.2;
-    padding-top: 35px;
-    margin-bottom: 10px;
+    padding-top: 65px;
+    margin-bottom: 18px;
   }
 
   .hero {
-    font-size: 22px;
+    font-size: 19px;
     line-height: 1.2;
   }
 
@@ -1025,16 +1063,50 @@ img {
     top: 83px;
   }
 
+  .social .icon {
+    width: 23px;
+    height: 23px;
+  }
+
   .social__item:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .control-panel {
-    margin-top: 58px;
+    margin-top: 28px;
   }
 
   .control-panel .icon {
-    height: 35px;
+    height: 28px;
+  }
+
+  .control-panel__separator::after {
+    height: 24px;
+    width: 1px;
+    top: -3px;
+  }
+
+  .control-panel__arrows svg {
+    width: 25px;
+  }
+
+  .slick-dots button {
+    width: 3px;
+    height: 3px;
+  }
+
+  .slick-dots li.slick-active button {
+    width: 10px;
+    height: 10px;
+    border-width: 1.5px;
+  }
+
+  .arrow-right {
+    margin-left: 15px;
+  }
+
+  .arrow-left {
+    margin-right: 15px;
   }
 
   .projects__container {
@@ -1057,12 +1129,14 @@ img {
 
   .projects__box {
     padding-top: 350px;
+    position: relative;
+    z-index: 0;
   }
 
   .projects__subtitle {
     margin-top: 35px;
     margin-bottom: 20px;
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .projects__text {
@@ -1083,6 +1157,11 @@ img {
 
   .carousel__img {
     width: 275px;
+  }
+
+  .img-magnifier-glass {
+    width: 80px;
+    height: 80px;
   }
 
   .magnifier-icon {
@@ -1108,25 +1187,123 @@ img {
   }
 
   .hero__title {
-    font-size: 66px;
+    font-size: 62px;
+    line-height: 1.3;
     padding-top: 55px;
     margin-bottom: 28px;
   }
 
   .hero {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .social {
     top: 296px;
   }
 
+  .social .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-bottom: 17px;
+  }
+
   .control-panel {
     margin-top: 78px;
   }
+
+  .control-panel .icon {
+    height: 35px;
+  }
+
+  .control-panel__separator::after {
+    height: 28px;
+    width: 1px;
+    top: 0;
+  }
+
+  .control-panel__arrows svg {
+    width: 27px;
+  }
+
+  .slick-dots button {
+    width: 4px;
+    height: 4px;
+  }
+
+  .slick-dots li.slick-active button {
+    width: 13px;
+    height: 13px;
+  }
+
+  .arrow-right {
+    margin-left: 29px;
+  }
+
+  .arrow-left {
+    margin-right: 25px;
+  }
+
+  .projects__container {
+    padding-bottom: 270px;
+  }
+
+  .projects__title {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+
+  .projects .slider-for-wrapper {
+    right: 288px;
+    max-width: 450px;
+    top: 85px;
+  }
+
+  .projects__box {
+    position: relative;
+    z-index: 40;
+  }
+
+  .projects__subtitle {
+    max-width: 260px;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+
+  .projects__text {
+    max-width: 260px;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .projects .carousel-wrapper {
+    position: absolute;
+    max-width: 768px;
+    left: 30px;
+  }
+
+  .projects .slick-slide {
+    width: 300px;
+  }
+
+  .carousel__img {
+    width: 275px;
+  }
+
+  .magnifier-icon {
+    left: 28px;
+    top: 250px;
+  }
 }
 
-@media screen and (min-width: 460px) and (max-width: 1500px) {
+@media screen and (min-width: 360px) and (max-width: 1500px) {
   .menu-icon {
     display: block;
   }
