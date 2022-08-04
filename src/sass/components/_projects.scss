@@ -1,6 +1,5 @@
 .projects {
   &__container {
-    // padding-bottom: 433px;
     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
       padding-bottom: 60px;
     }
@@ -17,7 +16,6 @@
   }
 
   &__title {
-    margin-bottom: 80px;
     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
       margin-top: 60px;
       margin-bottom: 30px;
@@ -26,9 +24,9 @@
       margin-top: 80px;
       margin-bottom: 50px;
     }
-    // @media screen and (min-width: $desktop) {
-
-    // }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 80px;
+    }
   }
 
   &__title::after {
@@ -55,12 +53,10 @@
 
   .slider-for-wrapper {
     position: absolute;
-    // right: 627px;
-    // max-width: 1070px;
     z-index: 1;
     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      // right: 627px;
-      max-width: 430px;
+      // top: 140px;
+      max-width: 330px;
     }
     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
       right: 288px;
@@ -81,18 +77,19 @@
     // margin-left: auto;
     // z-index: 40;
     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      padding-top: 350px;
+      // padding-top: 350px;
+      padding-top: 280px;
       position: relative;
       // margin-right: 0px;
       // margin-left: auto;
       z-index: 0;
     }
     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-      position: relative;
+      // position: relative;
       // max-width: 440px;
       // margin-right: 0px;
       // margin-left: auto;
-      z-index: 40;
+      // z-index: 0;
     }
     @media screen and (min-width: $desktop) {
       position: relative;
@@ -106,20 +103,65 @@
   &__box--buttons {
     display: flex;
     justify-content: space-between;
+    // @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    // }
+    // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    //   display: flex;
+    //   justify-content: space-between;
+    // }
+    // @media screen and (min-width: $desktop) {
+    //   display: flex;
+    //   justify-content: space-between;
+    // }
+  }
+  &__button {
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      padding: 15px 10px 12px 10px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
   }
 
+  .carousel-buttons {
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      // margin: 0 auto;
+      // width: 132px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    }
+    @media screen and (min-width: $desktop) {
+    }
+  }
   &__button--arrow {
     font-size: 0;
-    padding: 20px 15px 15px 15px;
+
     border: 1px solid $border-color;
     background-color: $primary-background-color;
     cursor: pointer;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      padding: 15px 8px 12px 8px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 20px 15px 15px 15px;
+    }
   }
 
   &__button--left {
     transform: rotate(180deg);
     margin-right: 15px;
     fill: $primary-text-color;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      margin-right: 10px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 15px;
+    }
   }
 
   &__button--right {
@@ -132,7 +174,8 @@
     font-family: $main-font;
     line-height: 1.3;
     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      margin-top: 35px;
+      // margin-top: 290px;
+      margin-top: 25px;
       margin-bottom: 20px;
       font-size: 30px;
     }
@@ -192,6 +235,7 @@
       position: absolute;
       max-width: 768px;
       left: 30px;
+      z-index: 5;
       // margin-top: 100px;
     }
     @media screen and (min-width: $desktop) {
@@ -206,7 +250,7 @@
   .slick-slide {
     // width: 367px;
     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      width: 300px;
+      width: 225px;
     }
     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
       width: 300px;
@@ -232,7 +276,7 @@
 
 .carousel__img {
   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-    width: 275px;
+    width: 200px;
   }
   @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
     width: 275px;
@@ -251,17 +295,15 @@
 .img-magnifier-glass {
   position: absolute;
   cursor: none;
-  // width: 120px;
-  // height: 120px;
   z-index: 100;
   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
   }
-  // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-  //   width: 80px;
-  //   height: 80px;
-  // }
+  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    width: 100px;
+    height: 100px;
+  }
   @media screen and (min-width: $desktop) {
     width: 120px;
     height: 120px;
@@ -270,24 +312,322 @@
 
 .magnifier-icon {
   position: absolute;
-  // left: -28px;
-  // top: 500px;
   z-index: 30;
   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-    left: -18px;
-    top: 100px;
+    left: 30px;
+    top: 150px;
+    // top: 250px;
+    border: 2px solid red;
+    width: 85px;
     // z-index: 110;
   }
   @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-    left: 28px;
+    left: 40px;
     top: 250px;
+    width: 100px;
   }
   @media screen and (min-width: $desktop) {
     left: -28px;
     top: 500px;
+    width: 120px;
   }
 }
 
 .magnifier-icon.invisible {
   display: none;
 }
+
+// ===========================
+// .projects {
+//   &__container {
+//     // padding-bottom: 433px;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       padding-bottom: 60px;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//       padding-bottom: 270px;
+//     }
+//     @media screen and (min-width: $desktop) {
+//       padding-bottom: 433px;
+//     }
+//   }
+
+//   &__wrapper {
+//     position: relative;
+//   }
+
+//   &__title {
+//     margin-bottom: 80px;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       margin-top: 60px;
+//       margin-bottom: 30px;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//       margin-top: 80px;
+//       margin-bottom: 50px;
+//     }
+//     // @media screen and (min-width: $desktop) {
+
+//     // }
+//   }
+
+//   &__title::after {
+//     position: absolute;
+//     left: 224px;
+//     bottom: 10px;
+//     content: '';
+//     display: block;
+//     width: 200px;
+//     height: 1px;
+//     background-color: $secondary-border-color;
+//     border-radius: 2px;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       left: 190px;
+//       width: 100px;
+//     }
+//     // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+
+//     // }
+//     // @media screen and (min-width: $desktop) {
+
+//     // }
+//   }
+
+//   .slider-for-wrapper {
+//     position: absolute;
+//     // right: 627px;
+//     // max-width: 1070px;
+//     z-index: 1;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       // right: 627px;
+//       max-width: 430px;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//       right: 288px;
+//       max-width: 450px;
+//       top: 85px;
+//       // z-index: 41;
+//     }
+//     @media screen and (min-width: $desktop) {
+//       right: 627px;
+//       max-width: 1070px;
+//     }
+//   }
+
+//   &__box {
+//     // position: relative;
+//     // max-width: 540px;
+//     // margin-right: 0px;
+//     // margin-left: auto;
+//     // z-index: 40;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       padding-top: 350px;
+//       position: relative;
+//       // margin-right: 0px;
+//       // margin-left: auto;
+//       z-index: 0;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//       position: relative;
+//       // max-width: 440px;
+//       // margin-right: 0px;
+//       // margin-left: auto;
+//       z-index: 40;
+//     }
+//     @media screen and (min-width: $desktop) {
+//       position: relative;
+//       max-width: 540px;
+//       margin-right: 0px;
+//       margin-left: auto;
+//       z-index: 40;
+//     }
+//   }
+
+//   &__box--buttons {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   &__button--arrow {
+//     font-size: 0;
+//     padding: 20px 15px 15px 15px;
+//     border: 1px solid $border-color;
+//     background-color: $primary-background-color;
+//     cursor: pointer;
+//   }
+
+//   &__button--left {
+//     transform: rotate(180deg);
+//     margin-right: 15px;
+//     fill: $primary-text-color;
+//   }
+
+//   &__button--right {
+//     fill: $accent-color;
+//   }
+
+//   &__subtitle {
+//     // margin-top: 85px;
+//     // margin-bottom: 40px;
+//     font-family: $main-font;
+//     line-height: 1.3;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       margin-top: 35px;
+//       margin-bottom: 20px;
+//       font-size: 30px;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//       max-width: 260px;
+//       margin-right: 0px;
+//       margin-left: auto;
+//       margin-top: 25px;
+//       margin-bottom: 20px;
+//       font-size: 36px;
+//     }
+//     @media screen and (min-width: $desktop) {
+//       margin-top: 85px;
+//       margin-bottom: 40px;
+//       font-size: 44px;
+//     }
+//   }
+
+//   &__text {
+//     font-family: $main-font;
+//     line-height: 1.4;
+//     font-weight: 300;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       font-size: 16px;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//       max-width: 260px;
+//       margin-right: 0px;
+//       margin-left: auto;
+//       // margin-top: 25px;
+//       margin-bottom: 20px;
+//       font-size: 16px;
+//     }
+//     @media screen and (min-width: $desktop) {
+//       font-size: 18px;
+//     }
+//   }
+
+//   &__text:not(:last-child) {
+//     margin-bottom: 15px;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       margin-bottom: 10px;
+//     }
+//   }
+
+//   .carousel-wrapper {
+//     // position: absolute;
+//     // left: -180px;
+//     // bottom: -345px;
+//     // max-width: 941px;
+//     overflow: hidden;
+//     // z-index: 10;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       max-width: 460px;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//       position: absolute;
+//       max-width: 768px;
+//       left: 30px;
+//       // margin-top: 100px;
+//     }
+//     @media screen and (min-width: $desktop) {
+//       position: absolute;
+//       left: -180px;
+//       bottom: -345px;
+//       max-width: 941px;
+
+//       z-index: 10;
+//     }
+//   }
+//   .slick-slide {
+//     // width: 367px;
+//     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//       width: 300px;
+//     }
+//     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//       width: 300px;
+//     }
+//     @media screen and (min-width: $desktop) {
+//       width: 367px;
+//     }
+//   }
+// }
+
+// .carousel__item {
+//   // width: 327px;
+//   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//     // width: 207px;
+//   }
+//   // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//   //   width: 280px;
+//   // }
+//   @media screen and (min-width: $desktop) {
+//     width: 327px;
+//   }
+// }
+
+// .carousel__img {
+//   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//     width: 275px;
+//   }
+//   @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//     width: 275px;
+//   }
+// }
+
+// .slick-track {
+//   display: flex;
+// }
+
+// .img-magnifier-container {
+//   position: relative;
+//   z-index: 2;
+// }
+
+// .img-magnifier-glass {
+//   position: absolute;
+//   cursor: none;
+//   // width: 120px;
+//   // height: 120px;
+//   z-index: 100;
+//   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//     width: 80px;
+//     height: 80px;
+//   }
+//   // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//   //   width: 80px;
+//   //   height: 80px;
+//   // }
+//   @media screen and (min-width: $desktop) {
+//     width: 120px;
+//     height: 120px;
+//   }
+// }
+
+// .magnifier-icon {
+//   position: absolute;
+//   // left: -28px;
+//   // top: 500px;
+//   z-index: 30;
+//   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+//     left: -18px;
+//     top: 100px;
+//     // z-index: 110;
+//   }
+//   @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+//     left: 28px;
+//     top: 250px;
+//   }
+//   @media screen and (min-width: $desktop) {
+//     left: -28px;
+//     top: 500px;
+//   }
+// }
+
+// .magnifier-icon.invisible {
+//   display: none;
+// }

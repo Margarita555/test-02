@@ -42,29 +42,20 @@ $('.hero__carousel').slick({
 const magnifierIcon = document.querySelector('.magnifier-icon');
 const carouselContainer = document.querySelector('.carousel-wrapper');
 const buttonsContainer = document.querySelector('.carousel-buttons');
+const mainImageContainer = document.querySelector('.slider-for-wrapper');
 
 magnifierIcon.addEventListener('mouseover', magnify);
 carouselContainer.addEventListener('click', magnify);
 carouselContainer.addEventListener('mouseup', magnify);
 buttonsContainer.addEventListener('click', magnify);
+mainImageContainer.addEventListener('mouseup', magnify);
 
-// magnifierIcon.addEventListener('touchmove', magnify);
-// window.addEventListener(
-//   'touchmove',
-//   function (event) {
-//     // some logic
-//     event.stopPropagation();
-//     event.preventDefault(); // <-- that should not be used in passive
-//     // some other magic
-//   },
-//   { passive: false },
-// );
-// magnifierIcon.addEventListener('touchstart', magnify);
 magnifierIcon.addEventListener('touchmove', magnify);
-
 carouselContainer.addEventListener('touchstart', magnify);
 carouselContainer.addEventListener('touchend', magnify);
 buttonsContainer.addEventListener('touchstart', magnify);
+mainImageContainer.addEventListener('touchend', magnify);
+
 function magnify() {
   // event.stopPropagation();
   // event.preventDefault();
@@ -87,10 +78,18 @@ function magnify() {
   currentImage.parentElement.insertBefore(glass, currentImage);
   glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
   glass.style.backgroundRepeat = 'no-repeat';
-  // glass.style.left = '200px';
-  // glass.style.top = '500px';
-  glass.style.left = '-18px';
-  glass.style.top = '100px';
+  console.log(window.innerWidth);
+  if (window.innerWidth <= 768) {
+    glass.style.left = '30px';
+    glass.style.top = '250px';
+  } else if (window.innerWidth <= 1500) {
+    glass.style.left = '40px';
+    glass.style.top = '250px';
+  } else {
+    glass.style.left = '200px';
+    glass.style.top = '500px';
+  }
+
   console.log('glass', glass);
   bw = 3;
   // if (event.targetTouches.length == 1) {
@@ -172,37 +171,52 @@ function magnify() {
   }
   function setMagnifyingIcon() {
     glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
-    glass.style.backgroundSize = '80px 80px';
     glass.style.backgroundPosition = '0px 0px';
     glass.style.border = 'none';
+    if (window.innerWidth <= 768) {
+      glass.style.backgroundSize = '85px 85px';
+    } else if (window.innerWidth <= 1500) {
+      glass.style.backgroundSize = '100px 100px';
+    } else {
+      glass.style.backgroundSize = '120px 120px';
+    }
   }
 }
 
 // ===============================
 // function magnify() {
-
+//   // event.stopPropagation();
+//   // event.preventDefault();
 //   const currentImage = document.querySelector('.slider-for .slick-current > img');
 //   if (currentImage.parentNode.firstElementChild.classList.contains('img-magnifier-glass')) {
 //     return;
 //   }
 //   magnifierIcon.classList.add('invisible');
-
+//   // event.stopPropagation();
+//   // event.preventDefault();
 //   const zoom = 3;
 //   let glass, w, h, bw;
 
+//   // glass = `<div class="img-magnifier-glass"><img src="./img/projects-images/magnifier.svg" alt="magnifying glass icon" /></div>`;
+//   // currentImage.insertAdjacentHTML('beforebegin', glass);
+
 //   glass = document.createElement('DIV');
 //   glass.setAttribute('class', 'img-magnifier-glass');
-//   console.log('current', currentImage);
-//   console.log('current.parent', currentImage.parentElement);
-//   console.log('glass', glass);
-//   console.log('glass', glass);
+//   console.log('a');
 //   currentImage.parentElement.insertBefore(glass, currentImage);
 //   glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
 //   glass.style.backgroundRepeat = 'no-repeat';
-//   glass.style.left = '200px';
-//   glass.style.top = '500px';
+//   // glass.style.left = '200px';
+//   // glass.style.top = '500px';
+//   glass.style.left = '-18px';
+//   glass.style.top = '100px';
+//   console.log('glass', glass);
 //   bw = 3;
-
+//   // if (event.targetTouches.length == 1) {
+//   //   var touch = event.targetTouches[0];
+//   //   touchOffsetX = touch.pageX - touch.target.offsetLeft;
+//   //   touchOffsetY = touch.pageY - touch.target.offsetTop;
+//   // }
 //   console.log(glass.offsetWidth, 'offset');
 //   w = glass.offsetWidth / 2;
 //   h = glass.offsetHeight / 2;
@@ -257,6 +271,7 @@ function magnify() {
 
 //     let pos_x = e.pageX || e.changedTouches[0].pageX;
 //     let pos_y = e.pageY || e.changedTouches[0].pageY;
+//     // console.log(e.pageX, e.changedTouches[0].pageX);
 //     console.log(pos_x, a.left);
 //     x = pos_x - a.left;
 //     y = pos_y - a.top;
@@ -276,7 +291,7 @@ function magnify() {
 //   }
 //   function setMagnifyingIcon() {
 //     glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
-//     glass.style.backgroundSize = '120px 120px';
+//     glass.style.backgroundSize = '80px 80px';
 //     glass.style.backgroundPosition = '0px 0px';
 //     glass.style.border = 'none';
 //   }

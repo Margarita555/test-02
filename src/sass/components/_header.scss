@@ -11,6 +11,15 @@
 .header__icon {
   margin-top: 4px;
   margin-bottom: 3px;
+  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    width: 76px;
+    //  height: ;
+  }
+  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+  }
+  @media screen and (min-width: $desktop) {
+    width: 96px;
+  }
 }
 
 .menu-icon {
