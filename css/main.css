@@ -375,10 +375,6 @@ img {
   position: relative;
 }
 
-.projects__title {
-  margin-bottom: 80px;
-}
-
 .projects__title::after {
   background: #8d9aa5;
   position: absolute;
@@ -408,7 +404,6 @@ img {
 .projects__button--arrow {
   background: #ffffff;
   font-size: 0;
-  padding: 20px 15px 15px 15px;
   border: 1px solid #98a4ae;
   cursor: pointer;
 }
@@ -890,6 +885,10 @@ img {
     padding-bottom: 120px;
   }
 
+  .header__icon {
+    width: 96px;
+  }
+
   .menu-icon {
     display: none;
   }
@@ -970,6 +969,10 @@ img {
     padding-bottom: 433px;
   }
 
+  .projects__title {
+    margin-bottom: 80px;
+  }
+
   .projects .slider-for-wrapper {
     right: 627px;
     max-width: 1070px;
@@ -981,6 +984,14 @@ img {
     margin-right: 0px;
     margin-left: auto;
     z-index: 40;
+  }
+
+  .projects__button--arrow {
+    padding: 20px 15px 15px 15px;
+  }
+
+  .projects__button--left {
+    margin-right: 15px;
   }
 
   .projects__subtitle {
@@ -1017,6 +1028,7 @@ img {
   .magnifier-icon {
     left: -28px;
     top: 500px;
+    width: 120px;
   }
 
   .instagram__container {
@@ -1031,6 +1043,10 @@ img {
 
   .container {
     max-width: 360px;
+  }
+
+  .header__icon {
+    width: 76px;
   }
 
   .service {
@@ -1124,17 +1140,29 @@ img {
   }
 
   .projects .slider-for-wrapper {
-    max-width: 430px;
+    max-width: 330px;
   }
 
   .projects__box {
-    padding-top: 350px;
+    padding-top: 280px;
     position: relative;
     z-index: 0;
   }
 
+  .projects__button {
+    padding: 15px 10px 12px 10px;
+  }
+
+  .projects__button--arrow {
+    padding: 15px 8px 12px 8px;
+  }
+
+  .projects__button--left {
+    margin-right: 10px;
+  }
+
   .projects__subtitle {
-    margin-top: 35px;
+    margin-top: 25px;
     margin-bottom: 20px;
     font-size: 30px;
   }
@@ -1152,21 +1180,23 @@ img {
   }
 
   .projects .slick-slide {
-    width: 300px;
+    width: 225px;
   }
 
   .carousel__img {
-    width: 275px;
+    width: 200px;
   }
 
   .img-magnifier-glass {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
   }
 
   .magnifier-icon {
-    left: -18px;
-    top: 100px;
+    left: 30px;
+    top: 150px;
+    border: 2px solid red;
+    width: 85px;
   }
 }
 
@@ -1261,11 +1291,6 @@ img {
     top: 85px;
   }
 
-  .projects__box {
-    position: relative;
-    z-index: 40;
-  }
-
   .projects__subtitle {
     max-width: 260px;
     margin-right: 0px;
@@ -1287,6 +1312,7 @@ img {
     position: absolute;
     max-width: 768px;
     left: 30px;
+    z-index: 5;
   }
 
   .projects .slick-slide {
@@ -1297,9 +1323,15 @@ img {
     width: 275px;
   }
 
+  .img-magnifier-glass {
+    width: 100px;
+    height: 100px;
+  }
+
   .magnifier-icon {
-    left: 28px;
+    left: 40px;
     top: 250px;
+    width: 100px;
   }
 }
 
