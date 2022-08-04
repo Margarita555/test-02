@@ -78,14 +78,21 @@ function magnify() {
   currentImage.parentElement.insertBefore(glass, currentImage);
   glass.style.backgroundImage = "url('" + magnifierIcon.childNodes[0].src + "')";
   glass.style.backgroundRepeat = 'no-repeat';
-  console.log(window.innerWidth);
-  if (window.innerWidth <= 768) {
-    glass.style.left = '30px';
-    glass.style.top = '250px';
-  } else if (window.innerWidth <= 1500) {
-    glass.style.left = '40px';
-    glass.style.top = '250px';
-  } else {
+  // console.log(window.innerWidth);
+  const mediaQuery = window.matchMedia('(min-width: 1500px)');
+  // const mobileMediaQuery = window.matchMedia('(min-width: 360px)') && window.matchMedia('(max-width: 768px)');
+  // const tabletMediaQuery = window.matchMedia('(min-width: 768px)') && window.matchMedia('(max-width: 1500px)');
+  console.log('mob', mediaQuery);
+  // console.log('tab', tabletMediaQuery);
+  if (!mediaQuery.matches) {
+    glass.style.left = '35px';
+    glass.style.top = '150px';
+  }
+  // else if (tabletMediaQuery.matches) {
+  //   glass.style.left = '200px';
+  //   glass.style.top = '500px';
+  // }
+  else {
     glass.style.left = '200px';
     glass.style.top = '500px';
   }
