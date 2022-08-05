@@ -1,79 +1,180 @@
 .instagram {
   background-color: $instagram-background-color;
-
-  &__container {
-    margin: 0 auto;
-    @media screen and (min-width: 1500px) {
-      max-width: 880px;
-    }
+  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @media screen and (min-width: $desktop) {
   }
 
+  // &__container {
+  //   // margin: 0 auto;
+  //   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+  //     // max-width: 280px;
+  //   }
+  //   @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+  //     // max-width: 600px;
+  //   }
+  //   @media screen and (min-width: $desktop) {
+  //     // max-width: 880px;
+  //   }
+  // }
+
   &__gallery {
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(280px, auto);
-    grid-gap: 20px;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      max-width: 330px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(150px, auto);
+      grid-gap: 15px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      max-width: 730px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(230px, auto);
+      grid-gap: 20px;
+    }
+    @media screen and (min-width: $desktop) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(280px, auto);
+      grid-gap: 20px;
+      max-width: 880px;
+    }
   }
 
   &__link--icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
     border-radius: 50px;
     background-color: $primary-text-color;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__item--last {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 71px;
     background-color: $primary-background-color;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      padding-top: 31px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      padding-top: 51px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-top: 71px;
+    }
   }
 
   &__link {
-    margin-top: 15px;
-    margin-bottom: 18px;
-    @include fonts($main-font, 24px, 1.2);
+    font-family: $main-font;
+    line-height: 1.2;
     color: $primary-text-color;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      margin-top: 9px;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    @media screen and (min-width: $tablet) {
+      margin-top: 15px;
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
   }
 
   &__button {
-    padding: 15px 32px 13px;
+    font-family: $main-font;
+    line-height: 1.6;
     background-color: $button-background-color;
     border: none;
-    @include fonts($main-font, 14px, 1.6);
     text-transform: uppercase;
     color: $button-text-color;
     cursor: pointer;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      font-size: 12px;
+      padding: 10px 20px 8px;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      padding: 15px 32px 13px;
+    }
   }
 }
 
 .instagram__title {
-  width: 410px;
-  margin: 0 auto;
-  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  // display: inline-block;
+  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    width: 330px;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    width: 410px;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 410px;
+    margin-bottom: 80px;
+  }
 
   &::after,
   &::before {
     position: absolute;
-
     content: '';
     display: block;
-    width: 200px;
     height: 1px;
     background-color: $secondary-border-color;
     border-radius: 2px;
+    // @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    //   width: 40px;
+    // }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      width: 130px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 200px;
+    }
   }
   &::after {
-    left: 420px;
     bottom: 10px;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      width: 150px;
+      left: 29%;
+      bottom: -20px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      right: -154px;
+    }
+    @media screen and (min-width: $desktop) {
+      right: -224px;
+    }
   }
 
   &::before {
-    left: -224px;
-    bottom: 10px;
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      left: -154px;
+      bottom: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      left: -224px;
+      bottom: 10px;
+    }
   }
 }

@@ -1,33 +1,94 @@
 .form {
-  position: absolute;
-  right: 82px;
-  top: 96px;
-  width: 735px;
+  // position: absolute;
+  // right: 82px;
+  // top: 96px;
+  // width: 735px;
   background-color: $primary-background-color;
-  padding: 76px 153px 104px 112px;
+  // padding: 76px 153px 104px 112px;
+  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    padding: 30px 20px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    position: absolute;
+    right: 15px;
+    top: 36px;
+    width: 435px;
+    padding: 30px 40px 25px 40px;
+  }
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    right: 82px;
+    top: 96px;
+    width: 735px;
+    padding: 76px 153px 104px 112px;
+  }
 
   &__section {
     background-color: $background-color;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      padding: 40px 15px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      padding: 30px 30px;
+    }
+    // @media screen and (min-width: $desktop) {
+
+    // }
   }
 
   &__container {
     position: relative;
   }
 
+  &__image {
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      display: none;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      width: 600px;
+    }
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
+  }
+
   &__title {
-    @include fonts($main-font, 44px, 1.3);
+    font-family: $main-font;
+    line-height: 1.3;
     margin-bottom: 16px;
     text-align: center;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      font-size: 26px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      font-size: 32px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+    }
   }
 
   &__text {
-    margin-bottom: 30px;
-    @include fonts($main-font, 18px, 1.4);
+    font-family: $main-font;
+    line-height: 1.4;
+    // margin-bottom: 30px;
     font-weight: 300;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
   }
 
   &__input {
-    padding: 13px 20px;
+    // padding: 13px 20px;
     margin-bottom: 16px;
     display: block;
     width: 100%;
@@ -35,6 +96,15 @@
     @include fonts($main-font, 16px, 1.4);
     font-weight: 300;
     color: $border-color;
+    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+      padding: 11px 10px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      padding: 11px 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 13px 20px;
+    }
   }
 
   &__button {

@@ -68,8 +68,6 @@
   }
 
   &__title {
-    // padding-top: 55px;
-    // margin-bottom: 28px;
     font-family: $main-font;
     line-height: 1;
 
@@ -80,6 +78,7 @@
       line-height: 1.2;
       padding-top: 65px;
       margin-bottom: 18px;
+      width: 320px;
     }
     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
       font-size: 62px;

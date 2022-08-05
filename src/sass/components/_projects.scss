@@ -16,13 +16,14 @@
   }
 
   &__title {
+    display: inline-block;
     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
       margin-top: 60px;
       margin-bottom: 30px;
     }
     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-      margin-top: 80px;
-      margin-bottom: 50px;
+      margin-top: 60px;
+      margin-bottom: 40px;
     }
     @media screen and (min-width: $desktop) {
       margin-bottom: 80px;
@@ -31,24 +32,26 @@
 
   &__title::after {
     position: absolute;
-    left: 224px;
+    // left: 224px;
     bottom: 10px;
     content: '';
     display: block;
-    width: 200px;
+    // width: 200px;
     height: 1px;
     background-color: $secondary-border-color;
     border-radius: 2px;
     @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      left: 190px;
-      width: 100px;
+      right: -90px;
+      width: 75px;
     }
-    // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-
-    // }
-    // @media screen and (min-width: $desktop) {
-
-    // }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+      right: -154px;
+      width: 130px;
+    }
+    @media screen and (min-width: $desktop) {
+      right: -224px;
+      width: 200px;
+    }
   }
 
   .slider-for-wrapper {
@@ -296,11 +299,11 @@
   position: absolute;
   cursor: none;
   z-index: 100;
-  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-    width: 85px;
-    height: 85px;
-  }
-  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+  // @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+  //   width: 85px;
+  //   height: 85px;
+  // }
+  @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
     width: 100px;
     height: 100px;
   }
@@ -313,19 +316,20 @@
 .magnifier-icon {
   position: absolute;
   z-index: 30;
-  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-    left: 35px;
-    top: 210px;
-    // top: 250px;
-    // border: 2px solid red;
-    width: 85px;
-    // z-index: 110;
-  }
-  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+  @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
     left: 35px;
     top: 210px;
     width: 100px;
+    // top: 250px;
+    // border: 2px solid red;
+    // width: 85px;
+    // z-index: 110;
   }
+  // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+  //   left: 35px;
+  //   top: 210px;
+  //   width: 100px;
+  // }
   @media screen and (min-width: $desktop) {
     left: -28px;
     top: 500px;
