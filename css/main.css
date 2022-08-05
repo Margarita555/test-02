@@ -107,11 +107,6 @@ img {
   align-items: center;
 }
 
-.header__icon {
-  margin-top: 4px;
-  margin-bottom: 3px;
-}
-
 .header__button {
   background: #ffffff;
   padding: 13px 35px 11px 35px;
@@ -375,14 +370,16 @@ img {
   position: relative;
 }
 
+.projects__title {
+  display: inline-block;
+}
+
 .projects__title::after {
   background: #8d9aa5;
   position: absolute;
-  left: 224px;
   bottom: 10px;
   content: "";
   display: block;
-  width: 200px;
   height: 1px;
   border-radius: 2px;
 }
@@ -469,42 +466,22 @@ img {
   background: #e5e5e5;
 }
 
-.blog__wrapper {
-  margin-bottom: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.blog__title {
+  display: inline-block;
 }
 
 .blog__title::after {
   background: #8d9aa5;
   position: absolute;
-  left: 319px;
   bottom: 10px;
   content: "";
   display: block;
-  width: 200px;
   height: 1px;
   border-radius: 2px;
 }
 
-.blog__button {
-  padding: 20px 62px 16px 62px;
-}
-
 .blog__carousel {
-  width: 1695px;
   overflow: hidden;
-}
-
-.blog .slick-slide {
-  width: 392px;
 }
 
 .blog__item {
@@ -515,7 +492,6 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 10px;
 }
 
 .blog__item:not(:last child) {
@@ -532,8 +508,6 @@ img {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  max-width: 380px;
-  padding: 20px 20px 15px 20px;
   border: 2px solid #cfdae3;
   border-top: none;
 }
@@ -545,12 +519,11 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 .blog__subtitle {
-  font: 14px/1.3 "GothamPro", sans serif;
-  padding: 5px 10px;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
@@ -563,12 +536,14 @@ img {
 }
 
 .blog__date {
-  font: 14px/1.3 "GothamPro", sans serif;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
 .blog__link {
-  font: 20px/1.2 "GothamPro", sans serif;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.2;
   color: #40474e;
 }
 
@@ -578,7 +553,6 @@ img {
 }
 
 .blog__statistics {
-  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,15 +581,10 @@ img {
   background: #cfdae3;
 }
 
-.instagram__container {
-  margin: 0 auto;
-}
-
 .instagram__gallery {
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(280px, auto);
-  grid-gap: 20px;
 }
 
 .instagram__link--icon {
@@ -629,8 +598,6 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
   border-radius: 50px;
 }
 
@@ -646,20 +613,18 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 71px;
 }
 
 .instagram__link {
-  font: 24px/1.2 "GothamPro", sans serif;
-  margin-top: 15px;
-  margin-bottom: 18px;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.2;
   color: #40474e;
 }
 
 .instagram__button {
-  font: 14px/1.6 "GothamPro", sans serif;
   background: #6b97bb;
-  padding: 15px 32px 13px;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.6;
   border: none;
   text-transform: uppercase;
   color: #f9f9fa;
@@ -667,9 +632,8 @@ img {
 }
 
 .instagram__title {
-  width: 410px;
-  margin: 0 auto;
-  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .instagram__title::after,
@@ -678,28 +642,16 @@ img {
   position: absolute;
   content: "";
   display: block;
-  width: 200px;
   height: 1px;
   border-radius: 2px;
 }
 
 .instagram__title::after {
-  left: 420px;
-  bottom: 10px;
-}
-
-.instagram__title::before {
-  left: -224px;
   bottom: 10px;
 }
 
 .form {
   background: #ffffff;
-  position: absolute;
-  right: 82px;
-  top: 96px;
-  width: 735px;
-  padding: 76px 153px 104px 112px;
 }
 
 .form__section {
@@ -711,19 +663,20 @@ img {
 }
 
 .form__title {
-  font: 44px/1.3 "GothamPro", sans serif;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.3;
   margin-bottom: 16px;
   text-align: center;
 }
 
 .form__text {
-  font: 300 18px/1.4 "GothamPro", sans serif;
-  margin-bottom: 30px;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.4;
+  font-weight: 300;
 }
 
 .form__input {
   font: 300 16px/1.4 "GothamPro", sans serif;
-  padding: 13px 20px;
   margin-bottom: 16px;
   display: block;
   width: 100%;
@@ -868,10 +821,36 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .header__icon {
+    width: 96px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+  }
+
   .service {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .instagram__link--icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .instagram__link {
+    margin-top: 15px;
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+
+  .instagram__button {
+    font-size: 14px;
+    padding: 15px 32px 13px;
+  }
+
+  .form__image {
+    display: block;
   }
 }
 
@@ -883,10 +862,6 @@ img {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
-  }
-
-  .header__icon {
-    width: 96px;
   }
 
   .menu-icon {
@@ -973,6 +948,11 @@ img {
     margin-bottom: 80px;
   }
 
+  .projects__title::after {
+    right: -224px;
+    width: 200px;
+  }
+
   .projects .slider-for-wrapper {
     right: 627px;
     max-width: 1070px;
@@ -1031,14 +1011,122 @@ img {
     width: 120px;
   }
 
-  .instagram__container {
+  .blog__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .blog__title::after {
+    width: 200px;
+    right: -224px;
+  }
+
+  .blog__button {
+    padding: 20px 62px 16px 62px;
+  }
+
+  .blog__carousel {
+    width: 1695px;
+  }
+
+  .blog .slick-slide {
+    width: 392px;
+  }
+
+  .blog__item {
+    padding: 10px;
+  }
+
+  .blog__box {
+    max-width: 380px;
+    padding: 20px 20px 15px 20px;
+  }
+
+  .blog__thumb {
+    margin-bottom: 20px;
+  }
+
+  .blog__subtitle {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .blog__date {
+    font-size: 14px;
+  }
+
+  .blog__link {
+    font-size: 20px;
+  }
+
+  .blog__statistics {
+    margin-top: 15px;
+  }
+
+  .instagram__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(280px, auto);
+    grid-gap: 20px;
     max-width: 880px;
+  }
+
+  .instagram__item--last {
+    padding-top: 71px;
+  }
+
+  .instagram__title {
+    width: 410px;
+    margin-bottom: 80px;
+  }
+
+  .instagram__title::after,
+  .instagram__title::before {
+    width: 200px;
+  }
+
+  .instagram__title::after {
+    right: -224px;
+  }
+
+  .instagram__title::before {
+    left: -224px;
+    bottom: 10px;
+  }
+
+  .form {
+    position: absolute;
+    right: 82px;
+    top: 96px;
+    width: 735px;
+    padding: 76px 153px 104px 112px;
+  }
+
+  .form__title {
+    font-size: 44px;
+  }
+
+  .form__text {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .form__input {
+    padding: 13px 20px;
   }
 }
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
   .title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .container {
@@ -1068,6 +1156,7 @@ img {
     line-height: 1.2;
     padding-top: 65px;
     margin-bottom: 18px;
+    width: 320px;
   }
 
   .hero {
@@ -1135,8 +1224,8 @@ img {
   }
 
   .projects__title::after {
-    left: 190px;
-    width: 100px;
+    right: -90px;
+    width: 75px;
   }
 
   .projects .slider-for-wrapper {
@@ -1187,15 +1276,132 @@ img {
     width: 200px;
   }
 
-  .img-magnifier-glass {
-    width: 85px;
-    height: 85px;
+  .blog {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
-  .magnifier-icon {
-    left: 35px;
-    top: 210px;
-    width: 85px;
+  .blog__wrapper {
+    margin-bottom: 30px;
+  }
+
+  .blog__title {
+    margin-bottom: 20px;
+  }
+
+  .blog__title::after {
+    width: 75px;
+    right: -90px;
+  }
+
+  .blog__button {
+    padding: 15px 32px 11px 32px;
+  }
+
+  .blog__carousel {
+    width: 480px;
+  }
+
+  .blog .slick-slide {
+    width: 200px;
+  }
+
+  .blog__item {
+    padding: 8px;
+  }
+
+  .blog__box {
+    max-width: 200px;
+    padding: 10px 8px 10px 8px;
+  }
+
+  .blog__thumb {
+    margin-bottom: 10px;
+  }
+
+  .blog__subtitle {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+
+  .blog__date {
+    font-size: 10px;
+  }
+
+  .blog__link {
+    font-size: 14px;
+  }
+
+  .blog__statistics {
+    margin-top: 10px;
+  }
+
+  .instagram {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .instagram__gallery {
+    max-width: 330px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 15px;
+  }
+
+  .instagram__link--icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .instagram__item--last {
+    padding-top: 31px;
+  }
+
+  .instagram__link {
+    margin-top: 9px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .instagram__button {
+    font-size: 12px;
+    padding: 10px 20px 8px;
+  }
+
+  .instagram__title {
+    width: 330px;
+    margin-bottom: 50px;
+  }
+
+  .instagram__title::after {
+    width: 150px;
+    left: 29%;
+    bottom: -20px;
+  }
+
+  .form {
+    padding: 30px 20px;
+  }
+
+  .form__section {
+    padding: 40px 15px;
+  }
+
+  .form__image {
+    display: none;
+  }
+
+  .form__title {
+    font-size: 26px;
+  }
+
+  .form__text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .form__input {
+    padding: 11px 10px;
   }
 }
 
@@ -1280,8 +1486,13 @@ img {
   }
 
   .projects__title {
-    margin-top: 80px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .projects__title::after {
+    right: -154px;
+    width: 130px;
   }
 
   .projects .slider-for-wrapper {
@@ -1326,15 +1537,134 @@ img {
     width: 275px;
   }
 
-  .img-magnifier-glass {
-    width: 100px;
-    height: 100px;
+  .blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  .magnifier-icon {
-    left: 35px;
-    top: 210px;
-    width: 100px;
+  .blog__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .blog__title::after {
+    right: -154px;
+    width: 130px;
+  }
+
+  .blog__button {
+    padding: 20px 42px 16px 42px;
+  }
+
+  .blog__carousel {
+    width: 753px;
+  }
+
+  .blog .slick-slide {
+    width: 300px;
+  }
+
+  .blog__item {
+    padding: 8px;
+  }
+
+  .blog__box {
+    max-width: 300px;
+    padding: 18px 18px 13px 18px;
+  }
+
+  .blog__thumb {
+    margin-bottom: 15px;
+  }
+
+  .blog__subtitle {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .blog__date {
+    font-size: 14px;
+  }
+
+  .blog__link {
+    font-size: 16px;
+  }
+
+  .blog__statistics {
+    margin-top: 12px;
+  }
+
+  .instagram {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .instagram__gallery {
+    max-width: 730px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(230px, auto);
+    grid-gap: 20px;
+  }
+
+  .instagram__item--last {
+    padding-top: 51px;
+  }
+
+  .instagram__title {
+    width: 410px;
+    margin-bottom: 50px;
+  }
+
+  .instagram__title::after,
+  .instagram__title::before {
+    width: 130px;
+  }
+
+  .instagram__title::after {
+    right: -154px;
+  }
+
+  .instagram__title::before {
+    left: -154px;
+    bottom: 10px;
+  }
+
+  .form {
+    position: absolute;
+    right: 15px;
+    top: 36px;
+    width: 435px;
+    padding: 30px 40px 25px 40px;
+  }
+
+  .form__section {
+    padding: 30px 30px;
+  }
+
+  .form__image {
+    width: 600px;
+  }
+
+  .form__title {
+    font-size: 32px;
+  }
+
+  .form__text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .form__input {
+    padding: 11px 15px;
   }
 }
 
@@ -1345,5 +1675,16 @@ img {
 
   .site-nav {
     display: none;
+  }
+
+  .img-magnifier-glass {
+    width: 100px;
+    height: 100px;
+  }
+
+  .magnifier-icon {
+    left: 35px;
+    top: 210px;
+    width: 100px;
   }
 }
