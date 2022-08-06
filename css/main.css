@@ -699,57 +699,47 @@ img {
 }
 
 .footer__container {
-  padding-top: 80px;
   padding-bottom: 20px;
 }
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 251px 201px 198px 258px 1fr 262px;
 }
 
 .footer__column--double {
   display: grid;
-  grid-auto-rows: minmax(150px, auto);
-}
-
-.footer__item:not(:last-child) {
-  margin-bottom: 10px;
 }
 
 .footer__button--arrow {
   background: #6b97bb;
-  padding: 20px 20px 17px 20px;
   margin-bottom: 20px;
   border: none;
 }
 
 .footer__button--download {
   background: transparent;
-  padding: 20px 20px 17px 20px;
   border: 1px solid #ffffff;
 }
 
 .footer__social {
-  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 132px;
 }
 
 .footer__title {
-  font: 18px/1.4 "GothamPro", sans serif;
-  margin-bottom: 15px;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.4;
   color: #ffffff;
 }
 
 .footer__link {
-  font: 14px/1.2 "GothamPro", sans serif;
   position: relative;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.2;
   color: #ffffff;
 }
 
@@ -762,19 +752,6 @@ img {
   display: block;
   left: 0;
   bottom: -4px;
-}
-
-.basement {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.basement .language-container {
-  margin-left: 105px;
 }
 
 .basement__language {
@@ -795,7 +772,8 @@ img {
 }
 
 .basement__rights {
-  font: 14px/1.2 "GothamPro", sans serif;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.2;
   color: #ffffff;
 }
 
@@ -1110,6 +1088,11 @@ img {
     padding: 76px 153px 104px 112px;
   }
 
+  .form__section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .form__title {
     font-size: 44px;
   }
@@ -1122,6 +1105,65 @@ img {
   .form__input {
     padding: 13px 20px;
   }
+
+  .footer__container {
+    padding-top: 80px;
+  }
+
+  .footer__wrapper {
+    grid-template-columns: 251px 201px 198px 258px 1fr 262px;
+  }
+
+  .footer__column--double {
+    grid-auto-rows: minmax(150px, auto);
+  }
+
+  .footer__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .footer__button--arrow {
+    padding: 20px 20px 17px 20px;
+  }
+
+  .footer__button--download {
+    padding: 20px 20px 17px 20px;
+  }
+
+  .footer__social {
+    max-width: 132px;
+    margin-top: 40px;
+  }
+
+  .footer__title {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .footer__link {
+    font-size: 14px;
+  }
+
+  .basement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .basement .language-container {
+    margin-left: 105px;
+  }
+
+  .basement__rights {
+    font-size: 14px;
+  }
+
+  .basement__text {
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
@@ -1131,6 +1173,11 @@ img {
 
   .container {
     max-width: 360px;
+  }
+
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .header__icon {
@@ -1215,11 +1262,11 @@ img {
   }
 
   .projects__container {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 
   .projects__title {
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 30px;
   }
 
@@ -1274,11 +1321,6 @@ img {
 
   .carousel__img {
     width: 200px;
-  }
-
-  .blog {
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
 
   .blog__wrapper {
@@ -1336,11 +1378,6 @@ img {
     margin-top: 10px;
   }
 
-  .instagram {
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
-
   .instagram__gallery {
     max-width: 330px;
     grid-template-columns: repeat(2, 1fr);
@@ -1354,7 +1391,7 @@ img {
   }
 
   .instagram__item--last {
-    padding-top: 31px;
+    padding-top: 28px;
   }
 
   .instagram__link {
@@ -1403,11 +1440,99 @@ img {
   .form__input {
     padding: 11px 10px;
   }
+
+  .footer__container {
+    padding-top: 10px;
+  }
+
+  .footer__wrapper {
+    justify-items: center;
+    gap: 18px;
+    grid-template-areas: "logo logo" "ceramica brands" "personnel admin" "buttons buttons";
+  }
+
+  .footer__logo {
+    grid-area: logo;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer .footer__ceramica {
+    grid-area: ceramica;
+  }
+
+  .footer .footer__brands {
+    grid-area: brands;
+  }
+
+  .footer .footer__personnel {
+    grid-area: personnel;
+  }
+
+  .footer .footer__admin {
+    grid-area: admin;
+  }
+
+  .footer .footer__buttons {
+    grid-area: buttons;
+  }
+
+  .footer__logo .icon {
+    height: 60px;
+  }
+
+  .footer__column--double {
+    grid-auto-rows: 115px 50px;
+  }
+
+  .footer__item:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .footer__social {
+    display: none;
+  }
+
+  .footer__title {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .basement {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .basement .language-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .basement__rights {
+    font-size: 12px;
+  }
+
+  .basement__text {
+    font-size: 10px;
+  }
+
+  .basement__development {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1500px) {
   .container {
     max-width: 768px;
+  }
+
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .hero__container {
@@ -1537,11 +1662,6 @@ img {
     width: 275px;
   }
 
-  .blog {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
   .blog__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1602,11 +1722,6 @@ img {
     margin-top: 12px;
   }
 
-  .instagram {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
   .instagram__gallery {
     max-width: 730px;
     display: grid;
@@ -1616,7 +1731,7 @@ img {
   }
 
   .instagram__item--last {
-    padding-top: 51px;
+    padding-top: 41px;
   }
 
   .instagram__title {
@@ -1666,6 +1781,84 @@ img {
   .form__input {
     padding: 11px 15px;
   }
+
+  .footer__container {
+    padding-top: 20px;
+  }
+
+  .footer__wrapper {
+    justify-items: center;
+    gap: 20px;
+    grid-template-areas: "logo logo buttons buttons" "ceramica brands personnel admin";
+  }
+
+  .footer__logo {
+    grid-area: logo;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-template-columns: 120px 160px;
+  }
+
+  .footer .footer__ceramica {
+    grid-area: ceramica;
+  }
+
+  .footer .footer__brands {
+    grid-area: brands;
+  }
+
+  .footer .footer__personnel {
+    grid-area: personnel;
+  }
+
+  .footer .footer__admin {
+    grid-area: admin;
+  }
+
+  .footer .footer__buttons {
+    grid-area: buttons;
+  }
+
+  .footer__logo .icon {
+    height: 100px;
+  }
+
+  .footer__column--double {
+    grid-auto-rows: 115px 50px;
+  }
+
+  .footer__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .footer__social {
+    margin-left: 55px;
+  }
+
+  .footer__title {
+    margin-bottom: 13px;
+    font-size: 16px;
+  }
+
+  .basement {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .basement__rights {
+    font-size: 12px;
+  }
+
+  .basement__text {
+    font-size: 10px;
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 1500px) {
@@ -1686,5 +1879,18 @@ img {
     left: 35px;
     top: 210px;
     width: 100px;
+  }
+
+  .footer__button--arrow {
+    padding: 15px 20px 13px 20px;
+    margin-top: 10px;
+  }
+
+  .footer__button--download {
+    padding: 15px 20px 13px 20px;
+  }
+
+  .footer__link {
+    font-size: 12px;
   }
 }
