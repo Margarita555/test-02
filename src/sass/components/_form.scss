@@ -31,9 +31,10 @@
     @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
       padding: 30px 30px;
     }
-    // @media screen and (min-width: $desktop) {
-
-    // }
+    @media screen and (min-width: $desktop) {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
   }
 
   &__container {
