@@ -18,6 +18,10 @@ body {
   background: #ffffff;
   font-family: "GothamPro";
   color: #40474e;
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -49,10 +53,12 @@ img {
 }
 
 .title {
-  font: 20px/1.21 "GothamPro", sans serif;
   position: relative;
+  font-family: "GothamPro", sans serif;
+  line-height: 1.21;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .container {
@@ -105,6 +111,11 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.header__icon {
+  margin-top: 4px;
+  margin-bottom: 3px;
 }
 
 .header__button {
@@ -403,14 +414,6 @@ img {
   font-size: 0;
   border: 1px solid #98a4ae;
   cursor: pointer;
-}
-
-.projects__button--left {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-right: 15px;
-  fill: #40474e;
 }
 
 .projects__button--right {
@@ -801,14 +804,38 @@ img {
 @media screen and (min-width: 768px) {
   .header__icon {
     width: 96px;
-    margin-top: 4px;
-    margin-bottom: 3px;
+    height: 86px;
   }
 
   .service {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .control-panel {
+    margin-top: 78px;
+  }
+
+  .control-panel__arrows svg {
+    width: 30px;
+  }
+
+  .projects__button--arrow {
+    padding: 18px 15px 17px 15px;
+  }
+
+  .projects__button--left {
+    margin-right: 15px;
+  }
+
+  .blog__subtitle {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .blog__date {
+    font-size: 14px;
   }
 
   .instagram__link--icon {
@@ -833,6 +860,10 @@ img {
 }
 
 @media screen and (min-width: 1500px) {
+  .title {
+    font-size: 20px;
+  }
+
   .container {
     max-width: 1500px;
   }
@@ -886,18 +917,10 @@ img {
     margin-bottom: 20px;
   }
 
-  .control-panel {
-    margin-top: 78px;
-  }
-
   .control-panel__separator::after {
     height: 34px;
     width: 1.5px;
     top: 0;
-  }
-
-  .control-panel__arrows svg {
-    width: 30px;
   }
 
   .slick-dots button {
@@ -942,14 +965,6 @@ img {
     margin-right: 0px;
     margin-left: auto;
     z-index: 40;
-  }
-
-  .projects__button--arrow {
-    padding: 20px 15px 15px 15px;
-  }
-
-  .projects__button--left {
-    margin-right: 15px;
   }
 
   .projects__subtitle {
@@ -1032,15 +1047,6 @@ img {
     margin-bottom: 20px;
   }
 
-  .blog__subtitle {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-
-  .blog__date {
-    font-size: 14px;
-  }
-
   .blog__link {
     font-size: 20px;
   }
@@ -1086,11 +1092,6 @@ img {
     top: 96px;
     width: 735px;
     padding: 76px 153px 104px 112px;
-  }
-
-  .form__section {
-    padding-top: 120px;
-    padding-bottom: 120px;
   }
 
   .form__title {
@@ -1166,7 +1167,7 @@ img {
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 768px) {
+@media screen and (min-width: 360px) and (max-width: 767.98px) {
   .title {
     font-size: 16px;
   }
@@ -1182,6 +1183,7 @@ img {
 
   .header__icon {
     width: 76px;
+    height: 66px;
   }
 
   .service {
@@ -1261,12 +1263,7 @@ img {
     margin-right: 15px;
   }
 
-  .projects__container {
-    padding-bottom: 40px;
-  }
-
   .projects__title {
-    margin-top: 40px;
     margin-bottom: 30px;
   }
 
@@ -1290,7 +1287,7 @@ img {
   }
 
   .projects__button--arrow {
-    padding: 15px 8px 12px 8px;
+    padding: 14px 8px 13px 8px;
   }
 
   .projects__button--left {
@@ -1348,10 +1345,6 @@ img {
     width: 200px;
   }
 
-  .blog__item {
-    padding: 8px;
-  }
-
   .blog__box {
     max-width: 200px;
     padding: 10px 8px 10px 8px;
@@ -1400,11 +1393,6 @@ img {
     font-size: 18px;
   }
 
-  .instagram__button {
-    font-size: 12px;
-    padding: 10px 20px 8px;
-  }
-
   .instagram__title {
     width: 330px;
     margin-bottom: 50px;
@@ -1421,7 +1409,8 @@ img {
   }
 
   .form__section {
-    padding: 40px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .form__image {
@@ -1439,10 +1428,6 @@ img {
 
   .form__input {
     padding: 11px 10px;
-  }
-
-  .footer__container {
-    padding-top: 10px;
   }
 
   .footer__wrapper {
@@ -1478,7 +1463,7 @@ img {
   }
 
   .footer__logo .icon {
-    height: 60px;
+    height: 80px;
   }
 
   .footer__column--double {
@@ -1487,6 +1472,15 @@ img {
 
   .footer__item:not(:last-child) {
     margin-bottom: 5px;
+  }
+
+  .footer__button--arrow {
+    padding: 15px 20px 13px 20px;
+    margin-top: 10px;
+  }
+
+  .footer__button--download {
+    padding: 15px 20px 13px 20px;
   }
 
   .footer__social {
@@ -1508,14 +1502,6 @@ img {
     margin-bottom: 15px;
   }
 
-  .basement__rights {
-    font-size: 12px;
-  }
-
-  .basement__text {
-    font-size: 10px;
-  }
-
   .basement__development {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -1525,7 +1511,11 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1500px) {
+@media screen and (min-width: 768px) and (max-width: 1499.98px) {
+  .title {
+    font-size: 18px;
+  }
+
   .container {
     max-width: 768px;
   }
@@ -1570,10 +1560,6 @@ img {
     margin-bottom: 17px;
   }
 
-  .control-panel {
-    margin-top: 78px;
-  }
-
   .control-panel .icon {
     height: 35px;
   }
@@ -1582,10 +1568,6 @@ img {
     height: 28px;
     width: 1px;
     top: 0;
-  }
-
-  .control-panel__arrows svg {
-    width: 27px;
   }
 
   .slick-dots button {
@@ -1607,11 +1589,10 @@ img {
   }
 
   .projects__container {
-    padding-bottom: 270px;
+    padding-bottom: 220px;
   }
 
   .projects__title {
-    margin-top: 60px;
     margin-bottom: 40px;
   }
 
@@ -1624,10 +1605,6 @@ img {
     right: 288px;
     max-width: 450px;
     top: 85px;
-  }
-
-  .projects__button--arrow {
-    padding: 20px 15px 15px 15px;
   }
 
   .projects__subtitle {
@@ -1692,10 +1669,6 @@ img {
     width: 300px;
   }
 
-  .blog__item {
-    padding: 8px;
-  }
-
   .blog__box {
     max-width: 300px;
     padding: 18px 18px 13px 18px;
@@ -1703,15 +1676,6 @@ img {
 
   .blog__thumb {
     margin-bottom: 15px;
-  }
-
-  .blog__subtitle {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-
-  .blog__date {
-    font-size: 14px;
   }
 
   .blog__link {
@@ -1735,7 +1699,7 @@ img {
   }
 
   .instagram__title {
-    width: 410px;
+    width: 368px;
     margin-bottom: 50px;
   }
 
@@ -1757,12 +1721,8 @@ img {
     position: absolute;
     right: 15px;
     top: 36px;
-    width: 435px;
+    width: 440px;
     padding: 30px 40px 25px 40px;
-  }
-
-  .form__section {
-    padding: 30px 30px;
   }
 
   .form__image {
@@ -1782,13 +1742,9 @@ img {
     padding: 11px 15px;
   }
 
-  .footer__container {
-    padding-top: 20px;
-  }
-
   .footer__wrapper {
-    justify-items: center;
-    gap: 20px;
+    justify-items: space-between;
+    gap: 25px;
     grid-template-areas: "logo logo buttons buttons" "ceramica brands personnel admin";
   }
 
@@ -1799,6 +1755,7 @@ img {
     -ms-flex-align: center;
     align-items: center;
     grid-template-columns: 120px 160px;
+    justify-self: center;
   }
 
   .footer .footer__ceramica {
@@ -1819,6 +1776,7 @@ img {
 
   .footer .footer__buttons {
     grid-area: buttons;
+    justify-self: center;
   }
 
   .footer__logo .icon {
@@ -1833,6 +1791,16 @@ img {
     margin-bottom: 8px;
   }
 
+  .footer__button--arrow {
+    padding: 20px 20px 17px 20px;
+    margin-top: 10px;
+  }
+
+  .footer__button--download {
+    padding: 20px 20px 17px 20px;
+    margin-top: 10px;
+  }
+
   .footer__social {
     margin-left: 55px;
   }
@@ -1843,7 +1811,7 @@ img {
   }
 
   .basement {
-    margin-top: 20px;
+    margin-top: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1851,17 +1819,9 @@ img {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-
-  .basement__rights {
-    font-size: 12px;
-  }
-
-  .basement__text {
-    font-size: 10px;
-  }
 }
 
-@media screen and (min-width: 360px) and (max-width: 1500px) {
+@media screen and (min-width: 360px) and (max-width: 1499.98px) {
   .menu-icon {
     display: block;
   }
@@ -1881,16 +1841,30 @@ img {
     width: 100px;
   }
 
-  .footer__button--arrow {
-    padding: 15px 20px 13px 20px;
-    margin-top: 10px;
+  .blog__item {
+    padding: 8px;
   }
 
-  .footer__button--download {
-    padding: 15px 20px 13px 20px;
+  .footer__container {
+    padding-top: 20px;
   }
 
   .footer__link {
     font-size: 12px;
+  }
+
+  .basement__rights {
+    font-size: 12px;
+  }
+
+  .basement__text {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .instagram__button {
+    font-size: 12px;
+    padding: 10px 20px 8px;
   }
 }
