@@ -17,6 +17,10 @@ body {
   font-family: 'GothamPro';
   color: $primary-text-color;
   background-color: $primary-background-color;
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -50,19 +54,19 @@ img {
 .title {
   position: relative;
   font-family: $main-font;
-  font-size: 20px;
   line-height: 1.21;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+  font-weight: 400;
+  @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
     font-size: 16px;
   }
-  // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-
-  // }
-  // @media screen and (min-width: $desktop) {
-
-  // }
+  @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+  }
 }
 
 .container {
@@ -70,11 +74,11 @@ img {
   padding-right: 15px;
   margin: 0 auto;
 
-  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+  @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
     max-width: $mobile;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+  @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
     max-width: $tablet;
   }
 
@@ -83,18 +87,12 @@ img {
   }
 }
 
-// @media screen and (min-width: 1500px) {
-//   .container {
-//     max-width: 1500px;
-//   }
-// }
-
 .section {
-  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+  @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+  @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -103,12 +101,6 @@ img {
     padding-bottom: 120px;
   }
 }
-// @media screen and (min-width: $desktop) {
-//   .section {
-//     padding-top: 120px;
-//     padding-bottom: 120px;
-//   }
-// }
 
 .button {
   padding: 20px 45px 16px 45px;

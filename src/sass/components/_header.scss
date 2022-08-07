@@ -9,24 +9,20 @@
 }
 
 .header__icon {
-  // margin-top: 4px;
-  // margin-bottom: 3px;
-  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+  margin-top: 4px;
+  margin-bottom: 3px;
+  @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
     width: 76px;
-    //  height: ;
+    height: 66px;
   }
-  // @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-
-  // }
   @media screen and (min-width: $tablet) {
     width: 96px;
-    margin-top: 4px;
-    margin-bottom: 3px;
+    height: 86px;
   }
 }
 
 .menu-icon {
-  @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
+  @media screen and (min-width: $mobile) and (max-width: ($max-tablet)) {
     display: block;
   }
 
@@ -42,9 +38,7 @@
 }
 
 .site-nav {
-  // display: flex;
-  // display: none;
-  @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
+  @media screen and (min-width: $mobile) and (max-width: ($max-tablet)) {
     display: none;
   }
   @media screen and (min-width: $desktop) {
@@ -71,7 +65,7 @@
 }
 
 .service {
-  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+  @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
     display: none;
   }
 

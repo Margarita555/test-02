@@ -3,10 +3,7 @@
 
   &__container {
     padding-bottom: 20px;
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      padding-top: 10px;
-    }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-tablet)) {
       padding-top: 20px;
     }
     @media screen and (min-width: $desktop) {
@@ -16,130 +13,100 @@
 
   &__wrapper {
     display: grid;
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       justify-items: center;
       gap: 18px;
       grid-template-areas:
         'logo logo'
-        // 'social social'
         'ceramica brands'
         'personnel admin'
         'buttons buttons';
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-      justify-items: center;
-      gap: 20px;
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
+      justify-items: space-between;
+      gap: 25px;
       grid-template-areas:
-        // 'logo ceramica brands'
-        // 'personnel admin buttons';
-
         'logo logo buttons buttons'
         'ceramica brands personnel admin';
     }
     @media screen and (min-width: $desktop) {
       grid-template-columns: 251px 201px 198px 258px 1fr 262px;
-      // grid-template-columns: repeat(5, 1fr) 262px;
     }
   }
 
   &__logo {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      // display: grid;
-      // grid-template-columns: 50% 50%;
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       grid-area: logo;
       margin-left: auto;
       margin-right: auto;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-      // position: relative;
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       grid-area: logo;
       display: grid;
       align-items: center;
       grid-template-columns: 120px 160px;
+      justify-self: center;
     }
   }
-  // &__social {
-  //   //   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-  //   //     grid-area: social;
-  //   //     margin-left: auto;
-  //   //     margin-right: auto;
-  //   //   }
-  //   @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-  //     grid-area: social;
-  //   }
-  // }
+
   .footer__ceramica {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       grid-area: ceramica;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       grid-area: ceramica;
     }
   }
   .footer__brands {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       grid-area: brands;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       grid-area: brands;
     }
   }
   .footer__personnel {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       grid-area: personnel;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       grid-area: personnel;
     }
   }
-  // .footer__trading {
-  //   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-  //     grid-area: trading;
-  //   }
-  //   @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-  //     grid-area: trading;
-  //   }
-  // }
+
   .footer__admin {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       grid-area: admin;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       grid-area: admin;
     }
   }
-  // .footer__marketing {
-  //   @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-  //     grid-area: marketing;
-  //   }
-  //   @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-  //     grid-area: marketing;
-  //   }
-  // }
+
   .footer__buttons {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       grid-area: buttons;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       grid-area: buttons;
+      justify-self: center;
     }
   }
   &__logo .icon {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      height: 60px;
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
+      height: 80px;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       height: 100px;
     }
   }
 
   &__column--double {
     display: grid;
-    // grid-auto-rows: minmax(150px, auto);
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       grid-auto-rows: 115px 50px;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       grid-auto-rows: 115px 50px;
     }
     @media screen and (min-width: $desktop) {
@@ -148,10 +115,10 @@
   }
 
   &__item:not(:last-child) {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       margin-bottom: 5px;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       margin-bottom: 8px;
     }
     @media screen and (min-width: $desktop) {
@@ -163,8 +130,12 @@
     margin-bottom: 20px;
     background-color: $secondary-text-color;
     border: none;
-    @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       padding: 15px 20px 13px 20px;
+      margin-top: 10px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
+      padding: 20px 20px 17px 20px;
       margin-top: 10px;
     }
     @media screen and (min-width: $desktop) {
@@ -175,8 +146,12 @@
   &__button--download {
     background-color: transparent;
     border: 1px solid $primary-background-color;
-    @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       padding: 15px 20px 13px 20px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
+      padding: 20px 20px 17px 20px;
+      margin-top: 10px;
     }
     @media screen and (min-width: $desktop) {
       padding: 20px 20px 17px 20px;
@@ -186,10 +161,10 @@
   &__social {
     display: flex;
     justify-content: space-between;
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       display: none;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       margin-left: 55px;
     }
     @media screen and (min-width: $desktop) {
@@ -202,11 +177,11 @@
     font-family: $main-font;
     line-height: 1.4;
     color: $primary-background-color;
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       margin-bottom: 12px;
       font-size: 14px;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       margin-bottom: 13px;
       font-size: 16px;
     }
@@ -221,7 +196,7 @@
     font-family: $main-font;
     line-height: 1.2;
     color: $primary-background-color;
-    @media screen and (min-width: $mobile) and (max-width: ($desktop)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-tablet)) {
       font-size: 12px;
     }
     @media screen and (min-width: $desktop) {
@@ -242,12 +217,12 @@
 }
 
 .basement {
-  @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+  @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
     margin-top: 20px;
     text-align: center;
   }
-  @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-    margin-top: 20px;
+  @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
   }
@@ -257,11 +232,9 @@
   }
 
   .language-container {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       margin-top: 15px;
       margin-bottom: 15px;
-    }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
     }
     @media screen and (min-width: $desktop) {
       margin-left: 105px;
@@ -288,10 +261,7 @@
     font-family: $main-font;
     line-height: 1.2;
     color: $primary-background-color;
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      font-size: 12px;
-    }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-tablet)) {
       font-size: 12px;
     }
     @media screen and (min-width: $desktop) {
@@ -304,10 +274,7 @@
     font-size: 12px;
     line-height: 1.33;
     color: $primary-background-color;
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
-      font-size: 10px;
-    }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-tablet)) {
       font-size: 10px;
     }
     @media screen and (min-width: $desktop) {
@@ -317,14 +284,10 @@
 
   &__development {
     display: flex;
-    @media screen and (min-width: $mobile) and (max-width: ($tablet)) {
+    @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       display: inline-flex;
       margin-left: auto;
       margin-right: auto;
-    }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop)) {
-    }
-    @media screen and (min-width: $desktop) {
     }
   }
 
