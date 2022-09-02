@@ -169,6 +169,9 @@
     @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
       height: 35px;
     }
+    @media screen and (min-width: $desktop) {
+      margin-left: 75px;
+    }
   }
   &__separator {
     position: relative;

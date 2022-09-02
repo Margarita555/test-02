@@ -32,7 +32,10 @@
 }
 .header__button {
   padding: 13px 35px 11px 35px;
+  font-size: 14px;
+  line-height: 1.15;
   background-color: $primary-background-color;
+  text-transform: uppercase;
   border: 1px solid $accent-color;
   cursor: pointer;
 }
