@@ -121,6 +121,9 @@ img {
 .header__button {
   background: #ffffff;
   padding: 13px 35px 11px 35px;
+  font-size: 14px;
+  line-height: 1.15;
+  text-transform: uppercase;
   border: 1px solid #aa182c;
   cursor: pointer;
 }
@@ -917,6 +920,10 @@ img {
     margin-bottom: 20px;
   }
 
+  .control-panel .icon {
+    margin-left: 75px;
+  }
+
   .control-panel__separator::after {
     height: 34px;
     width: 1.5px;
@@ -942,7 +949,7 @@ img {
   }
 
   .projects__container {
-    padding-bottom: 433px;
+    padding-bottom: 385px;
   }
 
   .projects__title {
@@ -975,6 +982,7 @@ img {
 
   .projects__text {
     font-size: 18px;
+    width: 459px;
   }
 
   .projects .carousel-wrapper {
@@ -1014,7 +1022,7 @@ img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 76px;
   }
 
   .blog__title::after {
@@ -1028,10 +1036,11 @@ img {
 
   .blog__carousel {
     width: 1695px;
+    margin-left: -10px;
   }
 
   .blog .slick-slide {
-    width: 392px;
+    width: 402px;
   }
 
   .blog__item {
