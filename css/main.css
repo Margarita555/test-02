@@ -282,7 +282,6 @@ img {
 
 .hero__title {
   font-family: "GothamPro", sans serif;
-  line-height: 1;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -898,6 +897,7 @@ img {
   }
 
   .hero__title {
+    line-height: 1;
     font-size: 86px;
     padding-top: 55px;
     margin-bottom: 28px;
@@ -912,8 +912,8 @@ img {
   }
 
   .social .icon {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 
   .social__item:not(:last-child) {
