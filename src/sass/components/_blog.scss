@@ -1,6 +1,12 @@
 .blog {
   background-color: $background-color;
 
+  &__section {
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 110px;
+    }
+  }
+
   &__wrapper {
     @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       margin-bottom: 30px;
@@ -15,7 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 76px;
+      margin-bottom: 69px;
     }
   }
 
