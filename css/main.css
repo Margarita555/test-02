@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "GilRoy";
-  src: url(../font/GothamPro.woff);
+  src: url(../font/Gilroy-Regular.woff);
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -282,6 +282,7 @@ img {
 
 .hero__title {
   font-family: "GothamPro", sans serif;
+  font-weight: 400;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -1012,6 +1013,10 @@ img {
     width: 120px;
   }
 
+  .blog__section {
+    padding-bottom: 110px;
+  }
+
   .blog__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1022,7 +1027,7 @@ img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 76px;
+    margin-bottom: 69px;
   }
 
   .blog__title::after {
@@ -1164,7 +1169,7 @@ img {
   }
 
   .basement .language-container {
-    margin-left: 105px;
+    margin-left: 138px;
   }
 
   .basement__rights {
