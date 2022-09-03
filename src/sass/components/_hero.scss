@@ -66,8 +66,6 @@
 
   &__title {
     font-family: $main-font;
-    line-height: 1;
-
     color: $primary-background-color;
     text-transform: uppercase;
     @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
@@ -84,6 +82,7 @@
       margin-bottom: 28px;
     }
     @media screen and (min-width: $desktop) {
+      line-height: 1;
       font-size: 86px;
       padding-top: 55px;
       margin-bottom: 28px;
@@ -134,8 +133,8 @@
       height: 28px;
     }
     @media screen and (min-width: $desktop) {
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;
     }
   }
 
