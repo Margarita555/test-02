@@ -232,15 +232,20 @@
   }
 
   .language-container {
+    display: flex;
     @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
       margin-top: 15px;
       margin-bottom: 15px;
+      width: 99px;
+      margin-left: auto;
+      margin-right: auto;
     }
     @media screen and (min-width: $desktop) {
-      margin-left: 138px;
+      margin-left: 133px;
     }
   }
   &__language {
+    position: relative;
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -255,6 +260,37 @@
   &__language:hover,
   &__language:focus {
     color: $primary-background-color;
+  }
+  &__language:not(:last-child) {
+    margin-right: 16px;
+  }
+  &__language.active {
+    color: #fff;
+  }
+  &__language:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    width: 1.5px;
+    right: -8px;
+    bottom: 3px;
+    background-color: #fff;
+    height: 10px;
+
+    // @media screen and (min-width: $mobile) and (max-width: ($max-mobile)) {
+    //   // height: 12px;
+    //   width: 1px;
+    //   top: -3px;
+    // }
+    // @media screen and (min-width: $tablet) and (max-width: ($max-tablet)) {
+    //   // height: 14px;
+    //   width: 1px;
+    //   top: 0;
+    // }
+    // @media screen and (min-width: $desktop) {
+    //   // height: 16px;
+    //   width: 1.5px;
+    //   top: 0;
+    // }
   }
 
   &__rights {
